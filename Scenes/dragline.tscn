@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://r0e1eotskc8v"]
+
+[ext_resource type="Script" path="res://Scripts/dragline.gd" id="1_i5p7v"]
+
+[node name="dragline" type="Line2D"]
+points = PackedVector2Array(0, 0, 0, 0)
+script = ExtResource("1_i5p7v")
