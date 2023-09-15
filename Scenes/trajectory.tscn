@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bolikhkndwuga"]
+
+[ext_resource type="Script" path="res://Scripts/Trajectory.gd" id="1_cqopi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jt5lk"]
+
+[node name="Trajectory" type="Line2D"]
+width = 5.0
+script = ExtResource("1_cqopi")
+
+[node name="collisionobject" type="CharacterBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisionobject"]
+scale = Vector2(0.25, 0.25)
+shape = SubResource("RectangleShape2D_jt5lk")

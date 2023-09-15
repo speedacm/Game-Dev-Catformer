@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://boo4b1j3w2q34"]
+
+[ext_resource type="PackedScene" uid="uid://r0e1eotskc8v" path="res://Scenes/dragline.tscn" id="1_uyaia"]
+[ext_resource type="PackedScene" uid="uid://bv5iafq5y71bk" path="res://Scenes/map.tscn" id="2_5bvau"]
+[ext_resource type="PackedScene" uid="uid://bdhgxihnvqm3e" path="res://Scenes/kineplayer.tscn" id="3_ve8hx"]
+[ext_resource type="PackedScene" uid="uid://bolikhkndwuga" path="res://Scenes/trajectory.tscn" id="4_0du1n"]
+
+[node name="GameScene" type="Node2D"]
+
+[node name="dragline" parent="." instance=ExtResource("1_uyaia")]
+
+[node name="Level1" parent="." instance=ExtResource("2_5bvau")]
+
+[node name="player" parent="." instance=ExtResource("3_ve8hx")]
+position = Vector2(544, 485)
+
+[node name="Trajectory" parent="." instance=ExtResource("4_0du1n")]
