@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://1n7w55oq1quq"]
+
+[ext_resource type="PackedScene" uid="uid://boo4b1j3w2q34" path="res://Scenes/Cat.tscn" id="1_6nmq3"]
+[ext_resource type="PackedScene" uid="uid://bv5iafq5y71bk" path="res://Scenes/map.tscn" id="2_faqfv"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Cat" parent="." instance=ExtResource("1_6nmq3")]
+
+[node name="Level1" parent="." instance=ExtResource("2_faqfv")]
