@@ -381,8 +381,8 @@ sources/1 = SubResource("TileSetAtlasSource_gfx3m")
 [node name="Level1" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(865, 373)
-scale = Vector2(3.82, 4)
+position = Vector2(865, -364)
+scale = Vector2(7.64, 8)
 texture = ExtResource("1_hcxwj")
 
 [node name="TileMap" type="TileMap" parent="."]

@@ -6,7 +6,7 @@ var vec_start := Vector2.ZERO # starting point of dragline
 var vec_fin := Vector2.ZERO # ending point of dragline
 @export var vel_multiplier := 1.5
 @export var vel_length_max := 2000
-@export var vel_max_modifer := 30
+# @export var vel_max_modifer := 30
 
 func _input(event: InputEvent) -> void:
 	if player.is_on_floor():
