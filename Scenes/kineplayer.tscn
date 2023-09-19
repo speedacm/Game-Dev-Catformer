@@ -7,6 +7,7 @@
 size = Vector2(127, 129)
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 2
 script = ExtResource("1_n43a3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -19,3 +20,4 @@ position = Vector2(-1.5, -1.5)
 shape = SubResource("RectangleShape2D_4xgcb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+drag_vertical_offset = -1.0

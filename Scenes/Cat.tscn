@@ -5,8 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://bolikhkndwuga" path="res://Scenes/trajectory.tscn" id="4_0du1n"]
 
 [node name="Cat" type="Node2D"]
+z_index = 2
 
 [node name="dragline" parent="." instance=ExtResource("1_uyaia")]
+z_index = 2
 
 [node name="player" parent="." instance=ExtResource("3_ve8hx")]
 position = Vector2(544, 485)
