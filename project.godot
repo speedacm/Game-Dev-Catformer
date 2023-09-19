@@ -19,7 +19,8 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
+window/stretch/scale=0.5
 
 [input]
 
@@ -32,6 +33,7 @@ Click={
 [physics]
 
 2d/default_gravity=1800.0
+2d/default_gravity_vector=Vector2(0, 2)
 
 [rendering]
 

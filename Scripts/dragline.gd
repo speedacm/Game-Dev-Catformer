@@ -4,7 +4,9 @@ extends Line2D
 @onready var player := get_parent().get_node("player")
 var vec_start := Vector2.ZERO # starting point of dragline
 var vec_fin := Vector2.ZERO # ending point of dragline
-@export var vec_multiplier := 2.5
+@export var vel_multiplier := 1.5
+@export var vel_length_max := 2000
+@export var vel_max_modifer := 30
 
 func _input(event: InputEvent) -> void:
 	if player.is_on_floor():
@@ -18,10 +20,13 @@ func _input(event: InputEvent) -> void:
 			points[1] = vec_fin
 		if Input.is_action_just_released("Click"):
 			
-			## I dont know if this works - trying to add a kind of 'maxspeed' by checking the length of the vel vector and normalizing if it exceeds that  
-			var vel = ((vec_start - vec_fin) * vec_multiplier)
-			if vel.length() > 100:
-				vel.normalized() * 30
-			player.velocity = vel
+
+			var vel = ((vec_start - vec_fin) * vel_multiplier)
+			print(vel.length())
+			if vel.length() > vel_length_max:
+				player.velocity = vel.normalized() * 1000 # fix this rate of slow down (way too harsh rn)
+			else:
+					player.velocity = vel
+			print("player velocity:" , player.velocity)
 			hide()
 		

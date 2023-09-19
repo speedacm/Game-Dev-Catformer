@@ -7,7 +7,7 @@ var max_points = 250
 func update_trajectory(delta):
 	clear_points()
 	var pos = player.global_position
-	var vel = ((dragline.vec_start - dragline.vec_fin) * dragline.vec_multiplier)
+	var vel = ((dragline.vec_start - dragline.vec_fin) * dragline.vel_multiplier)
 	for i in max_points:
 		add_point(pos)
 		vel.y += player.gravity * delta
