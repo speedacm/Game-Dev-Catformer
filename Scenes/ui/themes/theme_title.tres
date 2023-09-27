@@ -1,3 +1,16 @@
-[gd_resource type="Theme" format=3 uid="uid://bwelnjre1lx7j"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://bwelnjre1lx7j"]
+
+[ext_resource type="FontFile" uid="uid://dayf3ydaj2dtf" path="res://Scenes/ui/Puffy-gxW55.otf" id="1_4sypw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lmwr7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8hqdd"]
 
 [resource]
+Label/colors/font_color = Color(0.894118, 0.462745, 0, 1)
+Label/colors/font_outline_color = Color(0.423529, 0.2, 0.0196078, 1)
+Label/constants/outline_size = 24
+Label/font_sizes/font_size = 120
+Label/fonts/font = ExtResource("1_4sypw")
+Label/styles/normal = SubResource("StyleBoxEmpty_lmwr7")
+PanelContainer/styles/panel = SubResource("StyleBoxEmpty_8hqdd")

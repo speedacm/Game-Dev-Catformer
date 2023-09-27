@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfqajoqvr05i8"]
+[gd_scene load_steps=5 format=3 uid="uid://dfqajoqvr05i8"]
 
 [ext_resource type="Theme" uid="uid://bwelnjre1lx7j" path="res://Scenes/ui/themes/theme_title.tres" id="1_qbrhj"]
 [ext_resource type="Texture2D" uid="uid://e5ewuupgu71t" path="res://Asset_Pack/Background_0.png" id="1_vctw5"]
+[ext_resource type="Theme" uid="uid://dg2qdv72ayqap" path="res://Scenes/ui/themes/bg-test.tres" id="1_xjl46"]
 [ext_resource type="Theme" uid="uid://dvfut26fprh7d" path="res://Scenes/ui/themes/theme_one.tres" id="2_g4arw"]
 
 [node name="main_menu" type="Control"]
@@ -14,19 +15,31 @@ grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xjl46")
+texture = ExtResource("1_vctw5")
+metadata/_edit_lock_ = true
+
 [node name="Title" type="PanelContainer" parent="CanvasLayer"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -55.0
-offset_right = 55.0
-offset_bottom = 40.0
+offset_left = -450.0
+offset_top = 100.0
+offset_right = 450.0
+offset_bottom = 300.0
 grow_horizontal = 2
+theme = ExtResource("1_qbrhj")
 
 [node name="Label" type="Label" parent="CanvasLayer/Title"]
 layout_mode = 2
-theme = ExtResource("1_qbrhj")
-text = "Catplatformer"
+text = "Catformer"
+horizontal_alignment = 1
 
 [node name="Buttons" type="PanelContainer" parent="CanvasLayer"]
 anchors_preset = 8
@@ -37,33 +50,32 @@ anchor_bottom = 0.5
 offset_left = -300.0
 offset_top = -50.5
 offset_right = 300.0
-offset_bottom = 149.5
+offset_bottom = 349.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_g4arw")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Buttons"]
+[node name="ButtonsContainer" type="VBoxContainer" parent="CanvasLayer/Buttons"]
 layout_mode = 2
 
-[node name="Button_Play" type="Button" parent="CanvasLayer/Buttons/VBoxContainer"]
+[node name="Button_Play" type="Button" parent="CanvasLayer/Buttons/ButtonsContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("2_g4arw")
 text = "Play
 "
 
-[node name="Button_Settings" type="Button" parent="CanvasLayer/Buttons/VBoxContainer"]
+[node name="Button_Settings" type="Button" parent="CanvasLayer/Buttons/ButtonsContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("2_g4arw")
 text = "Settings"
 
-[node name="Button_Quit" type="Button" parent="CanvasLayer/Buttons/VBoxContainer"]
+[node name="Button_Appendix" type="Button" parent="CanvasLayer/Buttons/ButtonsContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("2_g4arw")
-text = "Quit"
+text = "Appendix"
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(961, 588)
-scale = Vector2(3.14543, 3.14543)
-texture = ExtResource("1_vctw5")
+[node name="Button_Quit" type="Button" parent="CanvasLayer/Buttons/ButtonsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit"
