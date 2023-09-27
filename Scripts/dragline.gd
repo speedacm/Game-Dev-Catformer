@@ -24,7 +24,8 @@ func _input(event: InputEvent) -> void:
 			var vel = ((vec_start - vec_fin) * vel_multiplier)
 			print(vel.length())
 			if vel.length() > vel_length_max:
-				player.velocity = vel.normalized() * 1000 # fix this rate of slow down (way too harsh rn)
+				player.velocity = vel.normalized()/100 # fix this rate of slow down (way too harsh rn)
+				
 			else:
 					player.velocity = vel
 			print("player velocity:" , player.velocity)

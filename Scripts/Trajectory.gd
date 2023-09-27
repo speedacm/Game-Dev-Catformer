@@ -2,6 +2,7 @@ extends Line2D
 
 @onready var player = get_parent().get_node("player")
 @onready var dragline = get_parent().get_node("dragline")
+@export var vel_length_max := 2000
 var max_points = 250
 
 func update_trajectory(delta):
@@ -9,7 +10,16 @@ func update_trajectory(delta):
 	var pos = player.global_position
 	var vel = ((dragline.vec_start - dragline.vec_fin) * dragline.vel_multiplier)
 	for i in max_points:
-		add_point(pos)
+		
+		
+		if vel.length() > dragline.vel_length_max:
+			default_color = Color.RED
+			add_point(pos)
+			print(vel.length())
+		else:
+			default_color = Color.WHITE
+			add_point(pos)
+			
 		vel.y += player.gravity * delta
 		
 		var collision = $collisionobject.move_and_collide(vel * delta, false, true, true)
