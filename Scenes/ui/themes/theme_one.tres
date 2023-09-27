@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dvfut26fprh7d"]
+
+[ext_resource type="FontFile" uid="uid://dayf3ydaj2dtf" path="res://Scenes/ui/Puffy-gxW55.otf" id="1_p6rdn"]
+
+[resource]
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_p6rdn")
