@@ -2,6 +2,7 @@ extends Line2D
 
 # onready is now an annotation in godot 4!
 @onready var player := get_parent().get_node("player")
+@onready var cam = get_parent().get_node("camera")
 var vec_start := Vector2.ZERO # starting point of dragline
 var vec_fin := Vector2.ZERO # ending point of dragline
 @export var vel_multiplier := 1.5
