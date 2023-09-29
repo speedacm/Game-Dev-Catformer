@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bdhgxihnvqm3e"]
 
-[ext_resource type="Texture2D" uid="uid://cikmu6305unx1" path="res://icon.svg" id="1_gbblk"]
+[ext_resource type="Texture2D" uid="uid://b0tpgupkeynsg" path="res://icon.svg" id="1_gbblk"]
 [ext_resource type="Script" path="res://Scripts/kineplayer.gd" id="1_n43a3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xgcb"]
@@ -19,3 +19,4 @@ position = Vector2(-1.5, -1.5)
 shape = SubResource("RectangleShape2D_4xgcb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)

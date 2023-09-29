@@ -6,5 +6,6 @@
 [node name="Main" type="Node2D"]
 
 [node name="Cat" parent="." instance=ExtResource("1_6nmq3")]
+position = Vector2(-31, -145)
 
 [node name="Level1" parent="." instance=ExtResource("2_faqfv")]
