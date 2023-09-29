@@ -2,6 +2,7 @@ extends Line2D
 
 @onready var player = get_parent().get_node("player")
 @onready var dragline = get_parent().get_node("dragline")
+@onready var cam = get_parent().get_node("camera")
 var max_points = 250
 
 func update_trajectory(delta):
@@ -39,6 +40,7 @@ func _process(delta):
 		if Input.is_action_pressed("Click"):
 			show()
 			update_trajectory(delta)
+			cam.update_cam(delta)
 	if Input.is_action_just_released("Click"):
 		hide()
 	pass
