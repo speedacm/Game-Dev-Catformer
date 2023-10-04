@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cikmu6305unx1" path="res://icon.svg" id="1_gbblk"]
 [ext_resource type="Script" path="res://Scripts/kineplayer.gd" id="1_n43a3"]
-[ext_resource type="Texture2D" uid="uid://bswb72hhd2dug" path="res://Asset_Pack/Background_0.png" id="3_nc2sn"]
+[ext_resource type="Texture2D" uid="uid://12vtbuemib6i" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="3_1eeqk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xgcb"]
 size = Vector2(127, 129)
@@ -27,4 +27,4 @@ drag_vertical_offset = -1.0
 [node name="Sprite2D2" type="Sprite2D" parent="Camera2D"]
 z_index = -3
 scale = Vector2(7, 7)
-texture = ExtResource("3_nc2sn")
+texture = ExtResource("3_1eeqk")
