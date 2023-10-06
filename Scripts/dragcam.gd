@@ -32,10 +32,13 @@ func _process(delta):
 	#pass
 
 func _input(event: InputEvent) -> void:
-	if (event.is_pressed()):
-		mousestart = event.position
-		current = position
-	if event is InputEventMouseMotion && drag:
+
+	if (event is InputEventMouse):
+		if (event.is_pressed() && event.button_index == MOUSE_BUTTON_LEFT):
+			mousestart = event.position
+			current = position
+	if (event is InputEventMouseMotion && drag):
+
 		dif = event.position - mousestart
 		if (dif.y > minheight):
 			position = current - zoom * dif
