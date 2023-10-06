@@ -4,6 +4,7 @@ extends Line2D
 @onready var player := get_parent().get_node("player")
 var vec_start := Vector2.ZERO # starting point of dragline
 var vec_fin := Vector2.ZERO # ending point of dragline
+var jump_attempt = false
 @export var vel_multiplier := 1.5
 @export var vel_length_max := 2000
 # @export var vel_max_modifer := 30
@@ -12,14 +13,14 @@ func _input(event: InputEvent) -> void:
 	if player.is_on_floor():
 		if Input.is_action_just_pressed("Click"):
 			show()
+			jump_attempt = true
 			vec_start = get_global_mouse_position()
 			points[0] = vec_start
-		if Input.is_action_pressed("Click"): #while holding down mouse button
+		if jump_attempt: #while holding down mouse button
 			vec_fin = get_global_mouse_position()
 			points[1] = vec_fin
-		if Input.is_action_just_released("Click"):
-			
-
+		if Input.is_action_just_released("Click") and jump_attempt == true:
+			jump_attempt = false
 			var vel = ((vec_start - vec_fin) * vel_multiplier)
 			print(vel.length())
 			# Ensure the velocity doesn't exceed vel_length_max
@@ -29,5 +30,8 @@ func _input(event: InputEvent) -> void:
 			else:
 					player.velocity = vel
 			print("player velocity:" , player.velocity)
+			hide()
+		if Input.is_action_just_pressed("Space"):
+			jump_attempt = false
 			hide()
 		

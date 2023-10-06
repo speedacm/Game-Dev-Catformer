@@ -34,9 +34,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if player.is_on_floor():
-		if Input.is_action_pressed("Click"):
+		if dragline.jump_attempt:
 			show()
 			update_trajectory(delta)
+		else:
+			hide()
 	if Input.is_action_just_released("Click"):
-		hide()
+			hide()
 	pass
