@@ -1,11 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdhgxihnvqm3e"]
+[gd_scene load_steps=5 format=3 uid="uid://bdhgxihnvqm3e"]
 
-
-[ext_resource type="Texture2D" uid="uid://cffi6en1mvi2s" path="res://icon.svg" id="1_gbblk"]
+[ext_resource type="Texture2D" uid="uid://b0tpgupkeynsg" path="res://icon.svg" id="1_gbblk"]
 [ext_resource type="Script" path="res://Scripts/kineplayer.gd" id="1_n43a3"]
-[ext_resource type="Texture2D" uid="uid://tw2hc4pgiia3" path="res://Asset_Pack/Background_0.png" id="3_nc2sn"]
-[ext_resource type="Script" path="res://Scripts/dragcam.gd" id="3_wgh80"]
-
+[ext_resource type="Texture2D" uid="uid://cl7d24q33omlt" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="3_1eeqk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xgcb"]
 size = Vector2(127, 129)
@@ -25,9 +22,7 @@ shape = SubResource("RectangleShape2D_4xgcb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 z_index = -1
-position_smoothing_enabled = true
 drag_vertical_offset = -1.0
-script = ExtResource("3_wgh80")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Camera2D"]
 z_index = -3
