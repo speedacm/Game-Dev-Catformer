@@ -9,6 +9,7 @@ z_index = 2
 
 [node name="dragline" parent="." instance=ExtResource("1_uyaia")]
 z_index = 2
+vel_multiplier = 2.0
 
 [node name="player" parent="." instance=ExtResource("3_ve8hx")]
 position = Vector2(544, 485)

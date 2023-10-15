@@ -1,24 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://nh7bsnwrgkg3"]
+[gd_scene load_steps=4 format=3 uid="uid://cxuchcpo4q2cs"]
 
-[ext_resource type="Script" path="res://Scenes/platform.gd" id="1_kjfn2"]
-[ext_resource type="Texture2D" uid="uid://bcucd7shul50n" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.37.08 PM.png" id="1_qnx4p"]
-[ext_resource type="Script" path="res://Scenes/friction.gd" id="2_4lhnk"]
+[ext_resource type="Texture2D" uid="uid://dto2t2x12sbgu" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.37.08 PM.png" id="1_hiryy"]
+[ext_resource type="Script" path="res://Scripts/platform.gd" id="1_xrlwo"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gycvn"]
-size = Vector2(291, 42)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hil6x"]
+size = Vector2(287, 38)
 
 [node name="platform" type="StaticBody2D"]
+position = Vector2(1, 0)
 collision_layer = 5
 collision_mask = 5
-script = ExtResource("1_kjfn2")
+script = ExtResource("1_xrlwo")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_qnx4p")
+texture = ExtResource("1_hiryy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0)
-shape = SubResource("RectangleShape2D_gycvn")
-
-[node name="Friction" type="Node2D" parent="CollisionShape2D"]
-position = Vector2(-0.5, 0)
-script = ExtResource("2_4lhnk")
+position = Vector2(-2.5, -1)
+shape = SubResource("RectangleShape2D_hil6x")

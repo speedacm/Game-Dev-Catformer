@@ -1,18 +1,66 @@
-[gd_scene load_steps=2 format=3 uid="uid://bv5iafq5y71bk"]
+[gd_scene load_steps=3 format=3 uid="uid://bv5iafq5y71bk"]
 
-[ext_resource type="PackedScene" uid="uid://nh7bsnwrgkg3" path="res://Scenes/platform.tscn" id="1_ssumm"]
+[ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="2_kcbli"]
+[ext_resource type="Texture2D" uid="uid://c2kfms1wh23nx" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="2_wne3f"]
 
 [node name="Level1" type="Node2D"]
 
-[node name="platform" parent="." instance=ExtResource("1_ssumm")]
-position = Vector2(904, 1065)
-scale = Vector2(8.667, 3.00565)
+[node name="platform" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(545, 37)
 
-[node name="platform2" parent="." instance=ExtResource("1_ssumm")]
-position = Vector2(76, 634)
+[node name="platform7" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(1523, -405)
 
-[node name="platform3" parent="." instance=ExtResource("1_ssumm")]
-position = Vector2(781, 287)
+[node name="platform8" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(330, -507)
 
-[node name="platform4" parent="." instance=ExtResource("1_ssumm")]
-position = Vector2(1547, 688)
+[node name="platform9" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(1138, -881)
+
+[node name="platform10" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(43, -1213)
+
+[node name="platform11" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(1131, -1613)
+
+[node name="platform12" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(107, -2293)
+
+[node name="platform13" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(1099, -2893)
+
+[node name="platform14" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(387, -3478)
+
+[node name="platform15" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(1103, -4237)
+
+[node name="platform16" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(-75, -4868)
+
+[node name="platform2" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(-581, 219)
+
+[node name="platform3" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(1275, 161)
+rotation = -0.443055
+
+[node name="platform4" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(109, 685)
+rotation = 0.296481
+
+[node name="platform5" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(1380, 701)
+
+[node name="platform6" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(793, 1076)
+scale = Vector2(10.7624, 1.58953)
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -3
+z_as_relative = false
+position = Vector2(639, -9272)
+rotation = -0.00872784
+scale = Vector2(13.9983, 37.0256)
+texture = ExtResource("2_wne3f")
+metadata/_edit_group_ = true
