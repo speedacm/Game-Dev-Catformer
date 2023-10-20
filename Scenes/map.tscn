@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bv5iafq5y71bk"]
 
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="2_kcbli"]
-[ext_resource type="Texture2D" uid="uid://c2kfms1wh23nx" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="2_wne3f"]
+[ext_resource type="Texture2D" uid="uid://blx6tmd25jrux" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="2_wne3f"]
 
 [node name="Level1" type="Node2D"]
 

@@ -5,7 +5,7 @@ var drag = false
 var mousestart
 var current
 var dif
-@export var maxheight = 400
+@export var maxheight = 200
 var minheight = 0
 var mode = 0 # Which camera mode is activated
 var resetting = false
@@ -42,5 +42,6 @@ func _input(event: InputEvent) -> void:
 		dif = event.position - mousestart
 		if (dif.y > minheight):
 			position = current - zoom * dif
+			#position = current - dif
 		if (dif.y > maxheight): position.y = -maxheight
 		global_position.x = playerstart.x
