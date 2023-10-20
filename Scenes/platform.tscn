@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxuchcpo4q2cs"]
 
-[ext_resource type="Texture2D" uid="uid://dto2t2x12sbgu" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.37.08 PM.png" id="1_hiryy"]
+[ext_resource type="Texture2D" uid="uid://c62gqwj0gllrj" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.37.08 PM.png" id="1_hiryy"]
 [ext_resource type="Script" path="res://Scripts/platform.gd" id="1_xrlwo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hil6x"]

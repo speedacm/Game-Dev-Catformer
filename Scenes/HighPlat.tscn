@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw2j2ovbwbocl"]
+
+[ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="1_ynti0"]
+[ext_resource type="Texture2D" uid="uid://dcwyh4g5ynmfp" path="res://Asset_Pack/statics/No Slide Platform.png" id="2_e8vxg"]
+
+[node name="platform" instance=ExtResource("1_ynti0")]
+position = Vector2(-15, -8)
+friction = 2.0
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_e8vxg")
