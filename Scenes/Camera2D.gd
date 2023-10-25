@@ -23,22 +23,22 @@ func _process(delta):
 		drag = false
 	if (position.y <= 0 && !drag):
 		position.y += 20
-	#global_position.x = playerstart.x
+	global_position.x = playerstart.x
 	pass
 
 func _input(event: InputEvent) -> void:
 
 	if (event is InputEventMouse):
 		if (event.is_pressed() && event.button_index == MOUSE_BUTTON_LEFT):
-			mousestart = event.position.y
+			mousestart = event.position
 			current = position
 			print(dif)
 	if (event is InputEventMouseMotion && drag):
 		
-		dif.y = event.position.y - mousestart
+		dif = event.position - mousestart
 		print(dif)
 		if (dif.y > min_y):
 			position = current - zoom * dif
 			#position = current - dif
 		if (dif.y > max_y): position.y = -max_y
-		#global_position.x = playerstart.x
+		global_position.x = playerstart.x
