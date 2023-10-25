@@ -14,11 +14,11 @@ func _input(event: InputEvent) -> void:
 			show()
 			#vec_start = get_global_mouse_position()
 			vec_start = get_viewport().get_mouse_position()
-			points[0] = vec_start
+			#points[0] = vec_start
 		if Input.is_action_pressed("Click"): #while holding down mouse button
 			#vec_fin = get_global_mouse_position()
 			vec_fin = get_viewport().get_mouse_position()
-			points[1] = vec_fin
+			#points[1] = vec_fin
 		if Input.is_action_just_released("Click"):
 			
 
