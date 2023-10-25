@@ -5,8 +5,8 @@ var drag = false
 var mousestart
 var current
 var dif
-@export var maxheight = 200
-var minheight = 0
+@export var max_y= 200
+var min_y = 0
 var mode = 0 # Which camera mode is activated
 var resetting = false
 @onready var playerstart = player.position
@@ -23,25 +23,22 @@ func _process(delta):
 		drag = false
 	if (position.y <= 0 && !drag):
 		position.y += 20
-	global_position.x = playerstart.x
+	#global_position.x = playerstart.x
 	pass
-
-#func update_cam(delta):
-	#drag = true
-	#position.y -= 200
-	#pass
 
 func _input(event: InputEvent) -> void:
 
 	if (event is InputEventMouse):
 		if (event.is_pressed() && event.button_index == MOUSE_BUTTON_LEFT):
-			mousestart = event.position
+			mousestart = event.position.y
 			current = position
+			print(dif)
 	if (event is InputEventMouseMotion && drag):
-
-		dif = event.position - mousestart
-		if (dif.y > minheight):
+		
+		dif.y = event.position.y - mousestart
+		print(dif)
+		if (dif.y > min_y):
 			position = current - zoom * dif
 			#position = current - dif
-		if (dif.y > maxheight): position.y = -maxheight
-		global_position.x = playerstart.x
+		if (dif.y > max_y): position.y = -max_y
+		#global_position.x = playerstart.x
