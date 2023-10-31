@@ -38,9 +38,14 @@ func _input(event: InputEvent) -> void:
 			mousestart = event.position
 			current = position
 	if (event is InputEventMouseMotion && drag):
-
 		dif = event.position - mousestart
 		if (dif.y > minheight):
 			position = current - zoom * dif
 		if (dif.y > maxheight): position.y = -maxheight
 		global_position.x = playerstart.x
+		
+		#Animations
+		if (dif.x > 0): get_parent().get_node("Sprite2D").flip_h = false
+		if (dif.x < 0): get_parent().get_node("Sprite2D").flip_h = true
+		
+
