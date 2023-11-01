@@ -30,6 +30,11 @@ func _physics_process(delta):
 		else:
 			velocity.x = move_toward(velocity.x, 0 , SPEED*friction)
 
+	if position.y > 1800:
+		position.y = 485
+		position.x = 544
+
+
 	#Animations
 	#Flip Sprite when changing direction
 	if (velocity.x>0): $Sprite2D.flip_h = false 
@@ -57,6 +62,7 @@ func _physics_process(delta):
 				$Sprite2D.rotation = normal.angle() + offset
 				$Sprite2D.position.y = offset
 			else: resetSprite()
+
 
 	#Jump Animation
 	if not is_on_floor():
