@@ -2,7 +2,7 @@ extends Line2D
 
 @onready var player = get_parent().get_node("player")
 @onready var dragline = get_parent().get_node("dragline")
-var max_points = 250
+var max_points = 500
 
 func update_trajectory(delta):
 	clear_points()
@@ -35,7 +35,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if player.is_on_floor():
+	if player.on_floor():
 		if Input.is_action_pressed("Click"):
 			show()
 			update_trajectory(delta)
