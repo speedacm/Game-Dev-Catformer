@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://brf7x7x0helpj"]
+
+[ext_resource type="Texture2D" uid="uid://dyg0aoljopday" path="res://Asset_Pack/statics/Game-Dev-Catforme Treestem.png" id="1_v4ea5"]
+
+[node name="TreeStem" type="Sprite2D"]
+scale = Vector2(0.427, 0.427)
+
+[node name="Stem" type="Sprite2D" parent="."]
+texture = ExtResource("1_v4ea5")
