@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-
+@onready var dragline = get_parent().get_node("dragline")
 const SPEED = 600.0
 const JUMP_VELOCITY = -400.0
 var friction = 0
@@ -21,7 +21,6 @@ func _physics_process(delta):
 	
 	if get_last_slide_collision() != null:
 		friction = get_last_slide_collision().get_collider().get_friction()
-		print(friction)
 	
 	if is_on_floor():
 		var direction = Input.get_axis("ui_left", "ui_right")
@@ -46,7 +45,7 @@ func _physics_process(delta):
 		#Play charge animation if dragging mouse
 		elif (Input.is_action_just_pressed("Click")):
 			mouse_start = get_global_mouse_position()
-		elif (Input.is_action_pressed("Click")): 
+		elif (dragline.jump_attempt == true): 
 			$AnimationPlayer.play("Jump Charge")
 			mouse_fin = get_global_mouse_position()
 			draglinedif = mouse_start - mouse_fin
