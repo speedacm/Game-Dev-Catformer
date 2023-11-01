@@ -26,6 +26,8 @@ func _physics_process(delta):
 			velocity.x = direction * SPEED
 		else:
 			velocity.x = move_toward(velocity.x, 0 , SPEED*friction)
-	
+	if position.y > 1800:
+		position.y = 485
+		position.x = 544
 
 
