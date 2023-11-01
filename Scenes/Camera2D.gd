@@ -34,7 +34,7 @@ func _input(event: InputEvent) -> void:
 			current = position
 			print(dif)
 	if (event is InputEventMouseMotion && drag):
-		
+
 		dif = event.position - mousestart
 		print(dif)
 		if (dif.y > min_y):
@@ -42,3 +42,9 @@ func _input(event: InputEvent) -> void:
 			#position = current - dif
 		if (dif.y > max_y): position.y = -max_y
 		global_position.x = playerstart.x
+		
+		#Animations
+		if (dif.x > 0): get_parent().get_node("Sprite2D").flip_h = false
+		if (dif.x < 0): get_parent().get_node("Sprite2D").flip_h = true
+		
+
