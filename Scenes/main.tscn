@@ -9,4 +9,6 @@
 position = Vector2(-77, -101)
 
 [node name="Level1" parent="." instance=ExtResource("2_faqfv")]
-position = Vector2(4163, 2319)
+
+position = Vector2(-673, -221)
+
