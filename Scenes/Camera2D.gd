@@ -1,7 +1,7 @@
 extends Camera2D
 
 @onready var player := get_parent()
-var drag = false
+@onready var dragline = get_parent().get_parent().get_node("dragline")
 var mousestart
 var current
 var dif
@@ -17,11 +17,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if (Input.is_action_pressed("Click")):
-		drag = true
-	elif (Input.is_action_just_released("Click")): 
-		drag = false
-	if (position.y <= 0 && !drag):
+	if (position.y <= 0 && !dragline.jump_attempt):
 		position.y += 20
 	global_position.x = playerstart.x
 	pass
@@ -32,13 +28,17 @@ func _input(event: InputEvent) -> void:
 		if (event.is_pressed() && event.button_index == MOUSE_BUTTON_LEFT):
 			mousestart = event.position
 			current = position
-			print(dif)
-	if (event is InputEventMouseMotion && drag):
-		
+	if (event is InputEventMouseMotion && dragline.jump_attempt):
+
 		dif = event.position - mousestart
-		print(dif)
 		if (dif.y > min_y):
 			position = current - zoom * dif
 			#position = current - dif
 		if (dif.y > max_y): position.y = -max_y
 		global_position.x = playerstart.x
+		
+		#Animations
+		if (dif.x > 0): get_parent().get_node("Sprite2D").flip_h = false
+		if (dif.x < 0): get_parent().get_node("Sprite2D").flip_h = true
+		
+

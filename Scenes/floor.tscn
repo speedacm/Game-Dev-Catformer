@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnjh6epg3xgit"]
+
+[ext_resource type="Script" path="res://Scripts/platform.gd" id="1_c1gw1"]
+[ext_resource type="Texture2D" uid="uid://dgfue0kihfegv" path="res://Asset_Pack/statics/GameDevCatformer - New Floor.png" id="1_jgfrj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqqm7"]
+size = Vector2(1966, 177)
+
+[node name="floor" type="StaticBody2D"]
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("1_c1gw1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 5.5)
+scale = Vector2(0.48, 0.427)
+texture = ExtResource("1_jgfrj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(44, 19.5)
+shape = SubResource("RectangleShape2D_aqqm7")

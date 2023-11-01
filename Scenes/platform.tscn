@@ -1,21 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxuchcpo4q2cs"]
 
-[ext_resource type="Texture2D" uid="uid://dto2t2x12sbgu" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.37.08 PM.png" id="1_hiryy"]
 [ext_resource type="Script" path="res://Scripts/platform.gd" id="1_xrlwo"]
+[ext_resource type="Texture2D" uid="uid://ceb5wvq258jtl" path="res://Asset_Pack/statics/Game-Dev-Catformer Platform.png" id="2_0entx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hil6x"]
-size = Vector2(287, 38)
+size = Vector2(287, 37)
 
 [node name="platform" type="StaticBody2D"]
 position = Vector2(1, 0)
 collision_layer = 5
 collision_mask = 5
 script = ExtResource("1_xrlwo")
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_hiryy")
+position = Vector2(-1, 5.5)
+scale = Vector2(0.48, 0.427)
+texture = ExtResource("2_0entx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.5, -1)
+position = Vector2(-2.5, -0.5)
 shape = SubResource("RectangleShape2D_hil6x")
