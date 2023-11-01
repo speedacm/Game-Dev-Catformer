@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=3 format=3 uid="uid://cxlin40hfk2lx"]
+=======
+[gd_scene load_steps=3 format=3 uid="uid://cpdi5ipwkd6ty"]
+>>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="1_g2w57"]
 [ext_resource type="Texture2D" uid="uid://c6igc6fwc4x4c" path="res://Asset_Pack/statics/Slide platform.png" id="2_g5asx"]
