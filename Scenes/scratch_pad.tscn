@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://h32gt51wlunb"]
+
+[ext_resource type="Script" path="res://scratchpad.gd" id="1_ib7t4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_roi12"]
+
+[node name="Scratch Pad" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_roi12")
+script = ExtResource("1_ib7t4")
+
+[connection signal="area_entered" from="." to="CollisionShape2D" method="_on_scratch_pad_area_entered"]
