@@ -21,8 +21,10 @@ func _input(event: InputEvent) -> void:
 			#vec_fin = get_global_mouse_position()
 			vec_fin = get_viewport().get_mouse_position()
 			#points[1] = vec_fin
-		if Input.is_action_just_released("Click") and jump_attempt == true:
-			jump_attempt = false
+
+		if Input.is_action_just_released("Click"):
+			
+
 
 			var vel = ((vec_start - vec_fin) * vel_multiplier)
 

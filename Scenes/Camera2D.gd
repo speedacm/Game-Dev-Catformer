@@ -28,9 +28,11 @@ func _input(event: InputEvent) -> void:
 		if (event.is_pressed() && event.button_index == MOUSE_BUTTON_LEFT):
 			mousestart = event.position
 			current = position
+
 	if (event is InputEventMouseMotion && dragline.jump_attempt):
 
 		dif = event.position - mousestart
+
 		if (dif.y > min_y):
 			position = current - zoom * dif
 			#position = current - dif
