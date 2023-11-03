@@ -1,7 +1,7 @@
 extends Camera2D
 
+@onready var dragline = get_parent().get_node("dragline")
 @onready var player := get_parent()
-var drag = false
 var mousestart
 var current
 var dif
@@ -18,11 +18,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-	if (Input.is_action_pressed("Click")):
-		drag = true
-	elif (Input.is_action_just_released("Click")): 
-		drag = false
-	if (position.y <= 0 && !drag):
+	
+	if (position.y <= 0 && !dragline.jump_attempt):
 		position.y += 20
 	global_position.x = playerstart.x
 	pass
@@ -33,12 +30,12 @@ func _process(delta):
 	#pass
 
 func _input(event: InputEvent) -> void:
-
+	
 	if (event is InputEventMouse):
 		if (event.is_pressed() && event.button_index == MOUSE_BUTTON_LEFT):
 			mousestart = event.position
 			current = position
-	if (event is InputEventMouseMotion && drag):
+	if (event is InputEventMouseMotion && dragline.jump_attempt):
 
 		dif = event.position - mousestart
 		if (dif.y > minheight):

@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bv5iafq5y71bk"]
+[gd_scene load_steps=7 format=3 uid="uid://bv5iafq5y71bk"]
 
+[ext_resource type="Texture2D" uid="uid://csuna2w26p5cy" path="res://Asset_Pack/First_Level_pt2.png" id="2_fpjj3"]
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="2_kcbli"]
-[ext_resource type="Texture2D" uid="uid://blx6tmd25jrux" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="2_wne3f"]
+
+[ext_resource type="Texture2D" uid="uid://12vtbuemib6i" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="2_wne3f"]
+[ext_resource type="PackedScene" uid="uid://cnjh6epg3xgit" path="res://Scenes/floor.tscn" id="3_7brpr"]
+[ext_resource type="PackedScene" uid="uid://bm31x1j2fs4a1" path="res://Scenes/lowfric.tscn" id="5_q510l"]
+[ext_resource type="PackedScene" uid="uid://d4a8g3n7wphyr" path="res://Scenes/highfric.tscn" id="6_hdb2k"]
+
 
 [node name="Level1" type="Node2D"]
 
@@ -64,3 +70,22 @@ rotation = -0.00872784
 scale = Vector2(13.9983, 37.0256)
 texture = ExtResource("2_wne3f")
 metadata/_edit_group_ = true
+
+[node name="background2" type="Sprite2D" parent="."]
+visible = false
+z_index = -3
+z_as_relative = false
+position = Vector2(771, -809)
+scale = Vector2(3.22852, 2.05957)
+texture = ExtResource("2_fpjj3")
+metadata/_edit_group_ = true
+
+[node name="floor" parent="." instance=ExtResource("3_7brpr")]
+position = Vector2(700, 1152)
+scale = Vector2(1.6, 1.6)
+
+[node name="platform17" parent="." instance=ExtResource("5_q510l")]
+position = Vector2(-360, -634)
+
+[node name="platform18" parent="." instance=ExtResource("6_hdb2k")]
+position = Vector2(997, -302)
