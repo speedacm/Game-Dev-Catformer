@@ -1,6 +1,7 @@
 extends CollisionShape2D
 
 @export var friction  = 1.0
+signal wall_contact
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,4 +14,5 @@ func _process(delta):
 
 
 func _on_scratch_pad_area_entered(area):
-	pass # Replace with function body.
+	emit_signal('wall_contact')
+

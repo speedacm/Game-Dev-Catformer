@@ -10,6 +10,8 @@ var draglinedif := Vector2.ZERO
 var facing = ''
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var canhold = false
+get_node(preload("res://Scenes/scratch_pad.tscn").connect("wall_contact",self,"_on_wall_entered")
 
 
 func _physics_process(delta):
@@ -32,6 +34,10 @@ func _physics_process(delta):
 	if position.y > 1800:
 		position.y = 485
 		position.x = 544
+	if Input.is_action_press("e") && canhold == true:
+		
+func _on_wall_entered():
+	
 
 
 	#Animations
@@ -73,4 +79,7 @@ func resetSprite():
 	$Sprite2D.rotation = 0
 	$Sprite2D.position.y = -22
 	
-
+	
+func hold_wall():
+	
+	
