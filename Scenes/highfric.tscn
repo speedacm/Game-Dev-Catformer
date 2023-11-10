@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4a8g3n7wphyr"]
+[gd_scene load_steps=3 format=3 uid="uid://cdqydwartk8a6"]
 
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="1_cb41q"]
-[ext_resource type="Texture2D" uid="uid://n4a4imrsqemh" path="res://Asset_Pack/statics/No Slide Platform.png" id="2_uufml"]
+[ext_resource type="Texture2D" uid="uid://cslgexevvtkam" path="res://Asset_Pack/statics/No Slide Platform.png" id="2_uufml"]
 
 [node name="platform" instance=ExtResource("1_cb41q")]
 friction = 1.0

@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bm31x1j2fs4a1"]
+[gd_scene load_steps=3 format=3 uid="uid://bichttx25c1lw"]
 
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="1_j25k8"]
-[ext_resource type="Texture2D" uid="uid://dbiryncnbg0h3" path="res://Asset_Pack/statics/Slide platform.png" id="2_3ienx"]
+[ext_resource type="Texture2D" uid="uid://nl28e2lyy4vt" path="res://Asset_Pack/statics/Slide platform.png" id="2_3ienx"]
 
-[node name="platform" instance=ExtResource("1_j25k8")]
+[node name="platform3" instance=ExtResource("1_j25k8")]
 friction = 0.0
 
 [node name="Sprite2D" parent="." index="0"]
