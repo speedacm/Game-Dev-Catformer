@@ -10,52 +10,39 @@
 
 [node name="Level1" type="Node2D"]
 
-[node name="platform" parent="." instance=ExtResource("2_kcbli")]
-position = Vector2(545, 37)
-
 [node name="platform7" parent="." instance=ExtResource("2_kcbli")]
-position = Vector2(1523, -405)
-
-[node name="platform8" parent="." instance=ExtResource("2_kcbli")]
-position = Vector2(330, -507)
+position = Vector2(-20, -54)
 
 [node name="platform9" parent="." instance=ExtResource("2_kcbli")]
-position = Vector2(1138, -881)
+position = Vector2(1146, -987)
 
 [node name="platform10" parent="." instance=ExtResource("2_kcbli")]
-position = Vector2(43, -1213)
+position = Vector2(413, -1689)
 
 [node name="platform11" parent="." instance=ExtResource("2_kcbli")]
 position = Vector2(1131, -1613)
 
 [node name="platform12" parent="." instance=ExtResource("2_kcbli")]
-position = Vector2(107, -2293)
+position = Vector2(1119, -2312)
 
 [node name="platform13" parent="." instance=ExtResource("2_kcbli")]
-position = Vector2(1099, -2893)
+position = Vector2(-464, -3685)
 
 [node name="platform14" parent="." instance=ExtResource("2_kcbli")]
-position = Vector2(387, -3478)
+position = Vector2(248, -7146)
 
 [node name="platform15" parent="." instance=ExtResource("2_kcbli")]
-position = Vector2(1103, -4237)
+position = Vector2(553, -6115)
 
 [node name="platform16" parent="." instance=ExtResource("2_kcbli")]
-position = Vector2(-75, -4868)
-
-[node name="platform2" parent="." instance=ExtResource("2_kcbli")]
-position = Vector2(-581, 219)
-
-[node name="platform3" parent="." instance=ExtResource("2_kcbli")]
-position = Vector2(1275, 161)
-rotation = -0.443055
+position = Vector2(1157, -5396)
 
 [node name="platform4" parent="." instance=ExtResource("2_kcbli")]
-position = Vector2(109, 685)
+position = Vector2(-181, 669)
 rotation = 0.296481
 
 [node name="platform5" parent="." instance=ExtResource("2_kcbli")]
-position = Vector2(1380, 701)
+position = Vector2(1249, 211)
 
 [node name="platform6" parent="." instance=ExtResource("2_kcbli")]
 position = Vector2(793, 1076)
@@ -83,14 +70,14 @@ metadata/_edit_group_ = true
 position = Vector2(700, 1152)
 scale = Vector2(1.6, 1.6)
 
-[node name="platform17" parent="." instance=ExtResource("5_q510l")]
-position = Vector2(-360, -634)
-
 [node name="platform18" parent="." instance=ExtResource("6_hdb2k")]
-position = Vector2(997, -302)
+position = Vector2(-75, -4665)
 
 [node name="Scratch Pad" parent="." instance=ExtResource("7_mxtyo")]
-position = Vector2(699, 757)
+position = Vector2(425, -1314)
 
 [node name="Scratch Pad2" parent="." instance=ExtResource("7_mxtyo")]
-position = Vector2(-37, -141)
+position = Vector2(387, -3070)
+
+[node name="lowfricplat" parent="." instance=ExtResource("5_q510l")]
+position = Vector2(435, -253)
