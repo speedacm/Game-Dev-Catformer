@@ -10,7 +10,7 @@ var jump_attempt = false
 # @export var vel_max_modifer := 30
 
 func _input(event: InputEvent) -> void:
-	if player.is_on_floor():
+	if player.is_on_floor() || player.canwalljump == true:
 		if Input.is_action_just_pressed("Click"):
 			jump_attempt = true
 			show()

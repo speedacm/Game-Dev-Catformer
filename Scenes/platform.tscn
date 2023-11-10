@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxuchcpo4q2cs"]
 
 [ext_resource type="Script" path="res://Scripts/platform.gd" id="1_xrlwo"]
-[ext_resource type="Texture2D" uid="uid://ceb5wvq258jtl" path="res://Asset_Pack/statics/Game-Dev-Catformer Platform.png" id="2_0entx"]
+[ext_resource type="Texture2D" uid="uid://lojygfhblygx" path="res://Asset_Pack/statics/Game-Dev-Catformer Platform.png" id="2_0entx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hil6x"]
 size = Vector2(287, 37)
