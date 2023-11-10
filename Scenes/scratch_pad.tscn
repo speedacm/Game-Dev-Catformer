@@ -1,13 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://h32gt51wlunb"]
+[gd_scene load_steps=4 format=3 uid="uid://h32gt51wlunb"]
 
-[ext_resource type="Script" path="res://scratchpad.gd" id="1_ib7t4"]
+[ext_resource type="Script" path="res://scratch_pad.gd" id="1_8ippc"]
+[ext_resource type="Texture2D" uid="uid://ctet6qdxw2ee3" path="res://Asset_Pack/brush.png" id="2_5yck5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_roi12"]
+size = Vector2(186, 188)
 
 [node name="Scratch Pad" type="Area2D"]
+script = ExtResource("1_8ippc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_roi12")
-script = ExtResource("1_ib7t4")
 
-[connection signal="area_entered" from="." to="CollisionShape2D" method="_on_scratch_pad_area_entered"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("2_5yck5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
