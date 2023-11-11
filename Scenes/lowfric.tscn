@@ -1,12 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://bichttx25c1lw"]
 
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="1_j25k8"]
+
 [ext_resource type="Texture2D" uid="uid://nl28e2lyy4vt" path="res://Asset_Pack/statics/Slide platform.png" id="2_3ienx"]
 
 [node name="platform3" instance=ExtResource("1_j25k8")]
+
 friction = 0.0
 
 [node name="Sprite2D" parent="." index="0"]
-position = Vector2(-3.00002, 2)
-scale = Vector2(0.97931, 0.904762)
-texture = ExtResource("2_3ienx")
+position = Vector2(-1, 9)
+scale = Vector2(0.47, 0.435)
+texture = ExtResource("2_3bes1")
