@@ -19,12 +19,14 @@ var exiting = false
 func _physics_process(delta):
 	# Add the gravity.
 	
+	
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	var movement = move_and_slide()
 	
 	if get_last_slide_collision() != null:
 		friction = get_last_slide_collision().get_collider().get_friction()
+		print(get_last_slide_collision().get_collider_velocity())
 	
 	if is_on_floor():
 		var direction = Input.get_axis("ui_left", "ui_right")

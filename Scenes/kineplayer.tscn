@@ -1,9 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://bdhgxihnvqm3e"]
+[gd_scene load_steps=13 format=3 uid="uid://bdhgxihnvqm3e"]
 
 [ext_resource type="Script" path="res://Scripts/kineplayer.gd" id="1_n43a3"]
-[ext_resource type="Texture2D" uid="uid://ctw7kkrvtgm0y" path="res://Cat Animations/GameDevCatformer(SpriteSheet2).png" id="2_8e8k0"]
-[ext_resource type="Texture2D" uid="uid://b1j40utw4anm1" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="3_1eeqk"]
+
+[ext_resource type="Texture2D" uid="uid://e0o6y5cg28qc" path="res://Cat Animations/GameDevCatformer(SpriteSheet2).png" id="2_8e8k0"]
+[ext_resource type="Texture2D" uid="uid://bsbi3nw6kew6q" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="3_1eeqk"]
+
 [ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="3_xp0tx"]
+[ext_resource type="Script" path="res://Scenes/UILine.gd" id="4_88xvk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xgcb"]
 size = Vector2(127, 129)
@@ -122,6 +125,10 @@ limit_right = 1800
 position_smoothing_enabled = true
 drag_vertical_offset = -1.0
 script = ExtResource("3_xp0tx")
+
+[node name="UILine" type="Line2D" parent="Camera2D"]
+points = PackedVector2Array(6, -1, 6, 0)
+script = ExtResource("4_88xvk")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 visible = false

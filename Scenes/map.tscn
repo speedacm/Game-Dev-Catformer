@@ -1,5 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bv5iafq5y71bk"]
 
+
 [ext_resource type="Texture2D" uid="uid://cgc3l35wbdf8q" path="res://Asset_Pack/First_Level_pt2.png" id="2_fpjj3"]
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="2_kcbli"]
 [ext_resource type="Texture2D" uid="uid://b1j40utw4anm1" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="2_wne3f"]
@@ -7,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bm31x1j2fs4a1" path="res://Scenes/lowfric.tscn" id="5_q510l"]
 [ext_resource type="PackedScene" uid="uid://d4a8g3n7wphyr" path="res://Scenes/highfric.tscn" id="6_hdb2k"]
 [ext_resource type="PackedScene" uid="uid://h32gt51wlunb" path="res://Scenes/scratch_pad.tscn" id="7_mxtyo"]
+
 
 [node name="Level1" type="Node2D"]
 
@@ -71,6 +73,7 @@ position = Vector2(700, 1152)
 scale = Vector2(1.6, 1.6)
 
 [node name="platform18" parent="." instance=ExtResource("6_hdb2k")]
+
 position = Vector2(-75, -4665)
 
 [node name="Scratch Pad" parent="." instance=ExtResource("7_mxtyo")]
@@ -81,3 +84,4 @@ position = Vector2(387, -3070)
 
 [node name="lowfricplat" parent="." instance=ExtResource("5_q510l")]
 position = Vector2(435, -253)
+
