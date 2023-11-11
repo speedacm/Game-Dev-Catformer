@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cnjh6epg3xgit" path="res://Scenes/floor.tscn" id="3_7brpr"]
 [ext_resource type="PackedScene" uid="uid://bichttx25c1lw" path="res://Scenes/lowfric.tscn" id="5_q510l"]
 [ext_resource type="PackedScene" uid="uid://cdqydwartk8a6" path="res://Scenes/highfric.tscn" id="6_hdb2k"]
-[ext_resource type="PackedScene" uid="uid://cp13perh2nvvy" path="res://Scenes/movingPlatform.tscn" id="7_vt2xn"]
+[ext_resource type="PackedScene" path="res://Scenes/movingPlatform.tscn" id="7_vt2xn"]
 
 [node name="Level1" type="Node2D"]
 
