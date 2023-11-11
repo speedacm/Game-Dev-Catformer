@@ -2,13 +2,15 @@ extends Line2D
 
 @onready var player = get_parent().get_node("player")
 @onready var dragline = get_parent().get_node("dragline")
-var max_points = 250
+var max_points = 250 / 1
 
 func update_trajectory(delta):
 	clear_points()
 	var pos = player.global_position
+	#var velAdjust = player.get_last_slide_collision().get_collider_velocity() #Adjusts trajectory based on current surfaces velocity
+	var velAdjust = 0
 	var vel = ((dragline.vec_start - dragline.vec_fin) * dragline.vel_multiplier)
-
+	
 	# Ensure velocity doesn't exceed vel_length_max and turn trajectory indicator red if velocity is at its maximum
 	if (vel.length() > dragline.vel_length_max):
 		vel = vel.normalized() * dragline.vel_length_max
