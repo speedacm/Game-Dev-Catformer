@@ -8,4 +8,4 @@
 [node name="Cat" parent="." instance=ExtResource("1_6nmq3")]
 
 [node name="Level1" parent="." instance=ExtResource("2_faqfv")]
-position = Vector2(-657, -227)
+position = Vector2(-673, -221)

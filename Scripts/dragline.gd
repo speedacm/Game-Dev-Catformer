@@ -25,12 +25,10 @@ func _input(event: InputEvent) -> void:
 			jump_attempt = false
 
 			var vel = ((vec_start - vec_fin) * vel_multiplier)
-			var velAdjust = player.get_last_slide_collision().get_collider_velocity() 
 
 			# Ensure the velocity doesn't exceed vel_length_max
 			if vel.length() > vel_length_max:
-				
-				player.velocity = (vel.normalized() * vel_length_max) - velAdjust # fix this rate of slow down (way too harsh rn)
+				player.velocity = vel.normalized() * vel_length_max # fix this rate of slow down (way too harsh rn)
 				
 			else:
 					player.velocity = vel
