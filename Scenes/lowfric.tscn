@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bm31x1j2fs4a1"]
+[gd_scene load_steps=3 format=3 uid="uid://bichttx25c1lw"]
 
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="1_j25k8"]
+
 [ext_resource type="Texture2D" uid="uid://byj1ke40125qo" path="res://Asset_Pack/statics/Game-Dev-Catformer - LF_Platform.png" id="2_3bes1"]
 
 [node name="lowfricplat" instance=ExtResource("1_j25k8")]
+
 friction = 0.0
 
 [node name="Sprite2D" parent="." index="0"]
