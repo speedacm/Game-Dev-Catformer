@@ -96,6 +96,6 @@ func _on_wallcontact():
 		
 func _on_wallexit():
 	canhold = false
-	canwalljump = true
+	canwalljump = false
 	
 	

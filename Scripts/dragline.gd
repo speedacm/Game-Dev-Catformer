@@ -23,6 +23,7 @@ func _input(event: InputEvent) -> void:
 			#points[1] = vec_fin
 		if Input.is_action_just_released("Click") and jump_attempt == true:
 			jump_attempt = false
+			player.canwalljump = false
 
 			var vel = ((vec_start - vec_fin) * vel_multiplier)
 
