@@ -10,6 +10,10 @@ var draglinedif := Vector2.ZERO
 var facing = ''
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var canhold = false
+var canwalljump = false
+var exiting = false
+#get_node(preload("res://Scenes/scratch_pad.tscn").connect("wall_contact",self,"_on_wall_entered")
 
 
 func _physics_process(delta):
@@ -33,6 +37,17 @@ func _physics_process(delta):
 		position.y = 485
 		position.x = 544
 
+	if Input.is_action_pressed("hold") && canhold == true:
+		if Input.is_action_just_released("Click"):
+			canhold = false
+		else:
+			velocity = Vector2(0,30)
+		move_and_slide()
+		pass
+		
+#func _on_wall_entered():
+	
+
 
 	#Animations
 	#Flip Sprite when changing direction
@@ -53,7 +68,7 @@ func _physics_process(delta):
 			if (draglinedif.x<0): $Sprite2D.flip_h = true
 		else: $AnimationPlayer.play("Idle") #Play Idle if no velocity
 		
-		#Rotate Sprite2D on slopes
+		#Rotate Sprite2D on slopesee
 		var normal: Vector2 = get_floor_normal()
 		var offset: float = deg_to_rad(90)
 		if ($SlopeDetector.is_colliding()):
@@ -73,4 +88,14 @@ func resetSprite():
 	$Sprite2D.rotation = 0
 	$Sprite2D.position.y = -22
 	
-
+	
+func _on_wallcontact():
+		canhold = true
+		canwalljump = true
+		
+		
+func _on_wallexit():
+	canhold = false
+	canwalljump = false
+	
+	
