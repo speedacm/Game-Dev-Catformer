@@ -10,7 +10,7 @@ var jump_attempt = false
 # @export var vel_max_modifer := 30
 
 func _input(event: InputEvent) -> void:
-	if player.is_on_floor():
+	if player.is_on_floor() || player.canwalljump == true:
 		if Input.is_action_just_pressed("Click"):
 			jump_attempt = true
 			show()
@@ -23,6 +23,7 @@ func _input(event: InputEvent) -> void:
 			#points[1] = vec_fin
 		if Input.is_action_just_released("Click") and jump_attempt == true:
 			jump_attempt = false
+			player.canwalljump = false
 
 			var vel = ((vec_start - vec_fin) * vel_multiplier)
 

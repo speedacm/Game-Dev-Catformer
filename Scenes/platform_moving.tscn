@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://dg3re3tri8tog"]
+
+[ext_resource type="Script" path="res://platformMoving.gd" id="1_oenin"]
+[ext_resource type="Texture2D" uid="uid://dght7bjyncte1" path="res://icon.svg" id="2_w2qcc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjflp"]
+size = Vector2(290, 42)
+
+[sub_resource type="Animation" id="Animation_e14f1"]
+resource_name = "moving"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(300, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yjckq"]
+_data = {
+"moving": SubResource("Animation_e14f1")
+}
+
+[node name="platformMoving" type="AnimatableBody2D"]
+position = Vector2(300, 0)
+script = ExtResource("1_oenin")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.8147e-06, 0)
+scale = Vector2(2.28125, 0.34375)
+texture = ExtResource("2_w2qcc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wjflp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "moving"
+libraries = {
+"": SubResource("AnimationLibrary_yjckq")
+}

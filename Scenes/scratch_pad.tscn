@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://h32gt51wlunb"]
+
+[ext_resource type="Script" path="res://scratch_pad.gd" id="1_8ippc"]
+[ext_resource type="Texture2D" uid="uid://8n67n8ha16gd" path="res://Asset_Pack/statics/Game-Dev-Catformer - Scratchpad.png" id="2_3qvi1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_roi12"]
+size = Vector2(501, 637)
+
+[node name="Scratch Pad" type="Area2D"]
+script = ExtResource("1_8ippc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5.5, 5.5)
+shape = SubResource("RectangleShape2D_roi12")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("2_3qvi1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
