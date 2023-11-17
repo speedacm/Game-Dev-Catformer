@@ -26,10 +26,12 @@ func _input(event: InputEvent) -> void:
 			player.canwalljump = false
 			var velAdjust
 			var vel = ((vec_start - vec_fin) * vel_multiplier)
+
 			if(player.get_last_slide_collision() != null):
 				velAdjust = player.get_last_slide_collision().get_collider_velocity()
 			else:
 				velAdjust = Vector2(0, 0)
+
 
 			# Ensure the velocity doesn't exceed vel_length_max
 			if vel.length() > vel_length_max:
