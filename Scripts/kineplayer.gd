@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var dragline = get_parent().get_node("dragline")
 const SPEED = 600.0
 const JUMP_VELOCITY = -400.0
+const HOP_VELOCITY = -400.0
 var friction = 0
 var mouse_start := Vector2.ZERO # starting point of dragline
 var mouse_fin := Vector2.ZERO # ending point of dragline
@@ -28,8 +29,18 @@ func _physics_process(delta):
 	
 	if is_on_floor():
 		var direction = Input.get_axis("ui_left", "ui_right")
+		if Input.is_action_pressed("left"):
+			direction -= 1
+		if Input.is_action_pressed("right"):
+			direction += 1
+		var sprint = 1
+		if Input.is_action_pressed("sprint"):
+			sprint = 1.5
+		if Input.is_action_just_pressed("hop"):
+			velocity.y = HOP_VELOCITY * sprint
 		if direction:
-			velocity.x = direction * SPEED
+			direction /= abs(direction)
+			velocity.x = direction * SPEED * sprint
 		else:
 			velocity.x = move_toward(velocity.x, 0 , SPEED*friction)
 
@@ -43,7 +54,6 @@ func _physics_process(delta):
 		else:
 			velocity = Vector2(0,30)
 		move_and_slide()
-		pass
 		
 #func _on_wall_entered():
 	
