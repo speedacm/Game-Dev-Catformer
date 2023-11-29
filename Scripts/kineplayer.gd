@@ -1,56 +1,45 @@
 extends CharacterBody2D
 
+@onready var sleeping = true
+
 @onready var dragline = get_parent().get_node("dragline")
 const SPEED = 600.0
+const SMALL_JUMP_VELOCITY = -700
 const JUMP_VELOCITY = -400.0
 var friction = 0
 var mouse_start := Vector2.ZERO # starting point of dragline
 var mouse_fin := Vector2.ZERO # ending point of dragline
 var draglinedif := Vector2.ZERO
 var facing = ''
-# Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var canhold = false
 var canwalljump = false
 var exiting = false
-#get_node(preload("res://Scenes/scratch_pad.tscn").connect("wall_contact",self,"_on_wall_entered")
+var smallHopping = false
 
-
+#Executes Every Frame
 func _physics_process(delta):
-	# Add the gravity.
 	
-	if not is_on_floor():
-		velocity.y += gravity * delta
-	var movement = move_and_slide()
-	
-	if get_last_slide_collision() != null:
-		friction = get_last_slide_collision().get_collider().get_friction()
-	
-	if is_on_floor():
-		var direction = Input.get_axis("ui_left", "ui_right")
-		if direction:
-			velocity.x = direction * SPEED
-		else:
-			velocity.x = move_toward(velocity.x, 0 , SPEED*friction)
-
-	if position.y > 1800:
-		position.y = 485
-		position.x = 544
-
-	if Input.is_action_pressed("hold") && canhold == true:
-		if Input.is_action_just_released("Click"):
-			canhold = false
-		else:
-			velocity = Vector2(0,30)
-		move_and_slide()
-		pass
+	if sleeping == false:
+		var movement = move_and_slide()
 		
-#func _on_wall_entered():
-	
+		Fall(delta)
+		
+		SetFriction()
+		
+		UserMovement(delta)
+		
+		TeleportBackToPlatform()
+		
+		Hold()
+		
+		AnimatePlayer()
 
 
-	#Animations
-	#Flip Sprite when changing direction
+
+#Function Defintions
+
+func AnimatePlayer():
 	if (velocity.x>0): $Sprite2D.flip_h = false 
 	elif (velocity.x<0): $Sprite2D.flip_h = true
 	
@@ -84,6 +73,52 @@ func _physics_process(delta):
 		if (velocity.y < 0): $AnimationPlayer.play("Jump_Release")
 		if (velocity.y > 0): $AnimationPlayer.play("Fall")
 		
+		
+
+func Hold():
+	if Input.is_action_pressed("hold") && canhold == true:
+		if Input.is_action_just_released("Click"):
+			canhold = false
+		else:
+			velocity = Vector2(0,30)
+		move_and_slide()
+
+
+func TeleportBackToPlatform():
+	if position.y > 1800:
+		position.y = 485
+		position.x = 544
+
+func UserMovement(delta):
+	if is_on_floor():
+		smallHopping = false
+		if (Input.is_action_just_pressed("space") and not dragline.jump_attempt):
+			velocity.y = SMALL_JUMP_VELOCITY
+			smallHopping = true
+	if is_on_floor() or smallHopping:
+		var direction = Input.get_axis("ui_left", "ui_right")
+		if Input.is_action_pressed("left"):
+			direction -= 1
+		if Input.is_action_pressed("right"):
+			direction += 1
+		var sprint = 1
+		if Input.is_action_pressed("sprint"):
+			sprint = 1.5
+		if direction:
+			direction /= abs(direction)
+			velocity.x = direction * SPEED * sprint
+		else:
+			velocity.x = move_toward(velocity.x, 0 , SPEED*friction)
+
+func SetFriction():
+	if get_last_slide_collision() != null:
+		friction = get_last_slide_collision().get_collider().get_friction()
+
+func Fall(delta):
+	if not is_on_floor():
+		velocity.y += gravity * delta
+
+
 func resetSprite():
 	$Sprite2D.rotation = 0
 	$Sprite2D.position.y = -22

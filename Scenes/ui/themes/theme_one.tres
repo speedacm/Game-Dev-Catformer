@@ -1,0 +1,17 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://dvfut26fprh7d"]
+
+[ext_resource type="FontFile" uid="uid://ddporor6kghk5" path="res://Scenes/ui/Puffy-gxW55.otf" id="1_p6rdn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t3bbr"]
+bg_color = Color(1, 1, 1, 0.117647)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6q3cn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o8efu"]
+
+[resource]
+Button/font_sizes/font_size = 80
+Button/fonts/font = ExtResource("1_p6rdn")
+Button/styles/hover = SubResource("StyleBoxFlat_t3bbr")
+Button/styles/normal = SubResource("StyleBoxEmpty_6q3cn")
+PanelContainer/styles/panel = SubResource("StyleBoxEmpty_o8efu")

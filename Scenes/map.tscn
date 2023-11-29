@@ -37,10 +37,6 @@ position = Vector2(553, -6115)
 [node name="platform16" parent="." instance=ExtResource("2_kcbli")]
 position = Vector2(1157, -5396)
 
-[node name="platform4" parent="." instance=ExtResource("2_kcbli")]
-position = Vector2(-181, 669)
-rotation = 0.296481
-
 [node name="platform6" parent="." instance=ExtResource("2_kcbli")]
 position = Vector2(793, 1076)
 scale = Vector2(10.7624, 1.58953)
@@ -52,7 +48,6 @@ position = Vector2(639, -9272)
 rotation = -0.00872784
 scale = Vector2(13.9983, 37.0256)
 texture = ExtResource("2_wne3f")
-metadata/_edit_group_ = true
 
 [node name="floor" parent="." instance=ExtResource("3_7brpr")]
 position = Vector2(700, 1152)
@@ -75,3 +70,6 @@ position = Vector2(387, -3070)
 
 [node name="lowfricplat" parent="." instance=ExtResource("5_q510l")]
 position = Vector2(435, -253)
+
+[node name="platform2" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(-43, 669)
