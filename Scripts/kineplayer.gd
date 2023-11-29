@@ -28,8 +28,16 @@ func _physics_process(delta):
 	
 	if is_on_floor():
 		var direction = Input.get_axis("ui_left", "ui_right")
+		if Input.is_action_pressed("left"):
+			direction -= 1
+		if Input.is_action_pressed("right"):
+			direction += 1
+		var sprint = 1
+		if Input.is_action_pressed("sprint"):
+			sprint = 1.5
 		if direction:
-			velocity.x = direction * SPEED
+			direction /= abs(direction)
+			velocity.x = direction * SPEED * sprint
 		else:
 			velocity.x = move_toward(velocity.x, 0 , SPEED*friction)
 
@@ -43,7 +51,6 @@ func _physics_process(delta):
 		else:
 			velocity = Vector2(0,30)
 		move_and_slide()
-		pass
 		
 #func _on_wall_entered():
 	
