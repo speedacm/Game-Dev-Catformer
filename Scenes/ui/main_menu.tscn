@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_fbysq"]
 [ext_resource type="Theme" uid="uid://bwelnjre1lx7j" path="res://Scenes/ui/themes/theme_title.tres" id="1_qbrhj"]
-[ext_resource type="Texture2D" uid="uid://e5ewuupgu71t" path="res://Asset_Pack/Background_0.png" id="1_vctw5"]
+[ext_resource type="Texture2D" uid="uid://bqqtt32e27pr0" path="res://Asset_Pack/Background_0.png" id="1_vctw5"]
 [ext_resource type="Theme" uid="uid://dg2qdv72ayqap" path="res://Scenes/ui/themes/bg-test.tres" id="1_xjl46"]
 [ext_resource type="Theme" uid="uid://dvfut26fprh7d" path="res://Scenes/ui/themes/theme_one.tres" id="2_g4arw"]
 
@@ -86,3 +86,4 @@ size_flags_vertical = 3
 text = "Quit"
 
 [connection signal="pressed" from="CanvasLayer/Buttons/ButtonsContainer/Button_Play" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/Buttons/ButtonsContainer/Button_Quit" to="." method="_on_button_quit_pressed"]

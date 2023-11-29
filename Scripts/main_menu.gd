@@ -2,6 +2,7 @@ extends Control
 
 @onready var main_menu = $CanvasLayer
 @onready var playButton = $CanvasLayer/Buttons/ButtonsContainer/Button_Play
+
 '''
 Additional notes:
 9/29/23
@@ -25,4 +26,12 @@ func _ready():
 	print("Main Menu Boot")
 
 func _on_button_play_pressed():
-	onSwitchScene()
+	var player = get_parent().get_node("Cat")
+	player.get_node('player').sleeping = false
+	queue_free()
+
+
+
+func _on_button_quit_pressed():
+	get_tree().quit()
+	pass # Replace with function body.
