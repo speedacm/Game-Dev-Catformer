@@ -7,6 +7,7 @@
 [node name="Main" type="Node2D"]
 
 [node name="Cat" parent="." instance=ExtResource("1_6nmq3")]
+metadata/_edit_group_ = true
 
 [node name="Level1" parent="." instance=ExtResource("2_faqfv")]
 position = Vector2(-657, -227)
