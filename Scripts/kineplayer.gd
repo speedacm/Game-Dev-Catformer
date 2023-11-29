@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var dragline = get_parent().get_node("dragline")
 const SPEED = 600.0
+const SMALL_JUMP_VELOCITY = -700
 const JUMP_VELOCITY = -400.0
 var friction = 0
 var mouse_start := Vector2.ZERO # starting point of dragline
@@ -14,7 +15,7 @@ var canhold = false
 var canwalljump = false
 var exiting = false
 #get_node(preload("res://Scenes/scratch_pad.tscn").connect("wall_contact",self,"_on_wall_entered")
-
+var smallHopping = false
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -27,6 +28,11 @@ func _physics_process(delta):
 		friction = get_last_slide_collision().get_collider().get_friction()
 	
 	if is_on_floor():
+		smallHopping = false
+		if (Input.is_action_just_pressed("space") and not dragline.jump_attempt):
+			velocity.y = SMALL_JUMP_VELOCITY
+			smallHopping = true
+	if is_on_floor() or smallHopping:
 		var direction = Input.get_axis("ui_left", "ui_right")
 		if Input.is_action_pressed("left"):
 			direction -= 1
