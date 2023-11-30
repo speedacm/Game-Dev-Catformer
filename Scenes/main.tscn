@@ -13,4 +13,3 @@ metadata/_edit_group_ = true
 position = Vector2(-657, -227)
 
 [node name="main_menu" parent="." instance=ExtResource("3_hpv0y")]
-visible = false
