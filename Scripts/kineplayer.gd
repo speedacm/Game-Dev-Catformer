@@ -17,6 +17,12 @@ var canwalljump = false
 var exiting = false
 var smallHopping = false
 
+signal falling()
+
+func _ready():
+	connect('falling', dragline._on_falling)
+
+
 #Executes Every Frame
 func _physics_process(delta):
 	
@@ -34,6 +40,7 @@ func _physics_process(delta):
 		Hold()
 		
 		AnimatePlayer()
+			
 
 
 
@@ -117,6 +124,8 @@ func SetFriction():
 func Fall(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		if not canwalljump:
+			emit_signal('falling')
 
 
 func resetSprite():

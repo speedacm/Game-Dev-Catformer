@@ -4,9 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bdhgxihnvqm3e" path="res://Scenes/kineplayer.tscn" id="3_ve8hx"]
 [ext_resource type="PackedScene" uid="uid://bolikhkndwuga" path="res://Scenes/trajectory.tscn" id="4_0du1n"]
 
-[sub_resource type="Gradient" id="Gradient_0m15u"]
-offsets = PackedFloat32Array(0, 0.524229, 0.993392, 1)
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.831017, 1, 1, 1, 0.559471, 1, 1, 1, 0)
+[sub_resource type="Gradient" id="Gradient_x38h8"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="Cat" type="Node2D"]
 z_index = 2
@@ -17,8 +16,7 @@ width = 0.0
 vel_multiplier = 2.0
 
 [node name="player" parent="." instance=ExtResource("3_ve8hx")]
-position = Vector2(0, -3000)
 
 [node name="Trajectory" parent="." instance=ExtResource("4_0du1n")]
-gradient = SubResource("Gradient_0m15u")
+gradient = SubResource("Gradient_x38h8")
 texture_mode = 2
