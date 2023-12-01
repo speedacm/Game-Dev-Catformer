@@ -17,6 +17,7 @@ var canwalljump = false
 var exiting = false
 var smallHopping = false
 
+
 #Executes Every Frame
 func _physics_process(delta):
 	
@@ -34,6 +35,7 @@ func _physics_process(delta):
 		Hold()
 		
 		AnimatePlayer()
+			
 
 
 

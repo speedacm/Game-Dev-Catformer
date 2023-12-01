@@ -1,0 +1,94 @@
+[gd_scene load_steps=7 format=3 uid="uid://oq3ifdx0g0si"]
+
+[ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="1_2uu0x"]
+[ext_resource type="PackedScene" uid="uid://bichttx25c1lw" path="res://Scenes/lowfric.tscn" id="2_qhm5k"]
+[ext_resource type="PackedScene" uid="uid://h32gt51wlunb" path="res://Scenes/scratch_pad.tscn" id="3_e1lhf"]
+[ext_resource type="PackedScene" uid="uid://ckbt8x02s0o6u" path="res://Scenes/width_guide.tscn" id="4_0t7mk"]
+[ext_resource type="PackedScene" uid="uid://br1drugah1lkp" path="res://Scenes/jumpguide.tscn" id="4_6ki0e"]
+[ext_resource type="PackedScene" uid="uid://cdqydwartk8a6" path="res://Scenes/highfric.tscn" id="6_ieauc"]
+
+[node name="level 2" type="Node2D"]
+
+[node name="Scratch Pad3" parent="." instance=ExtResource("3_e1lhf")]
+position = Vector2(-436, -3187)
+
+[node name="Scratch Pad2" parent="." instance=ExtResource("3_e1lhf")]
+position = Vector2(486, -2447)
+
+[node name="platform2" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(82, -3)
+
+[node name="Scratch Pad" parent="." instance=ExtResource("3_e1lhf")]
+position = Vector2(550, -622)
+
+[node name="WidthGuide" parent="." instance=ExtResource("4_0t7mk")]
+position = Vector2(-751, -2)
+
+[node name="platform3" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(1096, -817)
+
+[node name="Node2D" parent="." instance=ExtResource("4_6ki0e")]
+position = Vector2(1213, -8516)
+
+[node name="platform4" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(1659, -1642)
+
+[node name="platform5" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(-962, -1636)
+
+[node name="lowfricplat" parent="." instance=ExtResource("2_qhm5k")]
+position = Vector2(-444, -2789)
+
+[node name="platform6" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(-1316, -2426)
+
+[node name="lowfricplat2" parent="." instance=ExtResource("2_qhm5k")]
+position = Vector2(449, -3765)
+
+[node name="highfricplat" parent="." instance=ExtResource("6_ieauc")]
+position = Vector2(769, -3698)
+
+[node name="platform7" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(742, -5387)
+
+[node name="platform8" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(-1198, -4833)
+
+[node name="lowfricplat3" parent="." instance=ExtResource("2_qhm5k")]
+position = Vector2(-714, -5945)
+rotation = -0.525967
+
+[node name="Scratch Pad4" parent="." instance=ExtResource("3_e1lhf")]
+position = Vector2(101, -6470)
+
+[node name="platform9" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(1174, -6907)
+
+[node name="Scratch Pad5" parent="." instance=ExtResource("3_e1lhf")]
+position = Vector2(-260, -4864)
+
+[node name="platform10" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(1041, -7286)
+rotation = 1.5708
+
+[node name="platform11" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(1203, -8352)
+rotation = 1.5708
+
+[node name="lowfricplat4" parent="." instance=ExtResource("2_qhm5k")]
+position = Vector2(143, -7820)
+
+[node name="platform12" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(-1656, -9243)
+rotation = -3.14159
+
+[node name="Scratch Pad6" parent="." instance=ExtResource("3_e1lhf")]
+position = Vector2(-784, -9704)
+
+[node name="platform13" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(-461, -9972)
+rotation = 1.5708
+
+[node name="platform14" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(-473, -9384)
+rotation = 1.5708

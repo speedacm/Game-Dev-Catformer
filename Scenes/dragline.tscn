@@ -4,4 +4,6 @@
 
 [node name="dragline" type="Line2D"]
 points = PackedVector2Array(0, 0, 0, 0)
+width = 2.0
+default_color = Color(1, 1, 1, 0.188235)
 script = ExtResource("1_i5p7v")
