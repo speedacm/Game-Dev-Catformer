@@ -13,6 +13,7 @@ var draglinedif := Vector2.ZERO
 var facing = ''
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var canhold = false
+var Holding = false
 var canwalljump = false
 var exiting = false
 var smallHopping = false
@@ -75,7 +76,7 @@ func AnimatePlayer():
 
 
 	#Jump Animation
-	if not is_on_floor():
+	if not is_on_floor() && not Holding:
 		resetSprite() #Reset cat rotation when leaving ground
 		if (velocity.y < 0): $AnimationPlayer.play("Jump_Release")
 		if (velocity.y > 0): $AnimationPlayer.play("Fall")
@@ -84,11 +85,15 @@ func AnimatePlayer():
 
 func Hold():
 	if Input.is_action_pressed("hold") && canhold == true:
+		Holding = true
+		if Holding: $AnimationPlayer.play("Scratchpad_Fall")
 		if Input.is_action_just_released("Click"):
 			canhold = false
 		else:
 			velocity = Vector2(0,30)
 		move_and_slide()
+	else:
+		Holding = false
 
 
 func TeleportBackToPlatform():

@@ -1,8 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://bdhgxihnvqm3e"]
+[gd_scene load_steps=14 format=3 uid="uid://bdhgxihnvqm3e"]
 
 [ext_resource type="Script" path="res://Scripts/kineplayer.gd" id="1_n43a3"]
-[ext_resource type="Texture2D" uid="uid://dbvi6i46xbx0w" path="res://Cat Animations/GameDevCatformer(SpriteSheet2).png" id="2_8e8k0"]
-[ext_resource type="Texture2D" uid="uid://c2kfms1wh23nx" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="3_1eeqk"]
+[ext_resource type="Texture2D" uid="uid://cyy3x7od0vav2" path="res://Cat Animations/GameDevCatformer(SpriteSheet2).png" id="2_8e8k0"]
+[ext_resource type="Texture2D" uid="uid://mi21lreu1nji" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="3_1eeqk"]
 [ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="3_xp0tx"]
 [ext_resource type="Script" path="res://Scenes/UILine.gd" id="4_88xvk"]
 
@@ -91,12 +91,29 @@ tracks/0/keys = {
 "values": [10, 11, 12, 13, 14, 15]
 }
 
+[sub_resource type="Animation" id="Animation_3lecs"]
+resource_name = "Scratchpad_Fall"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [30, 31, 32, 33, 34]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wkack"]
 _data = {
 "Fall": SubResource("Animation_hokql"),
 "Idle": SubResource("Animation_2vv83"),
 "Jump Charge": SubResource("Animation_ton87"),
 "Jump_Release": SubResource("Animation_ddlkf"),
+"Scratchpad_Fall": SubResource("Animation_3lecs"),
 "Walk": SubResource("Animation_logl7")
 }
 
@@ -110,7 +127,8 @@ position = Vector2(0, -22)
 scale = Vector2(0.432531, 0.443167)
 texture = ExtResource("2_8e8k0")
 hframes = 10
-vframes = 3
+vframes = 4
+frame = 26
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
