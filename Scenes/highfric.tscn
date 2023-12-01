@@ -1,9 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cdqydwartk8a6"]
 
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="1_cb41q"]
-
-[ext_resource type="Texture2D" uid="uid://crmdtnra3wm37" path="res://Asset_Pack/statics/Game-Dev-Catformer - HF_Platform.png" id="2_1iebe"]
-
+[ext_resource type="Texture2D" uid="uid://bw45y68d5vptb" path="res://Asset_Pack/statics/Game-Dev-Catformer - HF_Platform.png" id="2_1iebe"]
 
 [node name="highfricplat" instance=ExtResource("1_cb41q")]
 friction = 1.0

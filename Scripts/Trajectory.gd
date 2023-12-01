@@ -2,7 +2,8 @@ extends Line2D
 
 @onready var player = get_parent().get_node("player")
 @onready var dragline = get_parent().get_node("dragline")
-var max_points = 250
+var max_points = 60
+
 
 func update_trajectory(delta):
 	clear_points()
@@ -39,5 +40,6 @@ func _process(delta):
 		show()
 		update_trajectory(delta)
 	else:
+		dragline.visible = false
 		hide()
 	pass

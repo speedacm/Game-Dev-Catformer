@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://boo4b1j3w2q34"]
+[gd_scene load_steps=5 format=3 uid="uid://boo4b1j3w2q34"]
 
 [ext_resource type="PackedScene" uid="uid://r0e1eotskc8v" path="res://Scenes/dragline.tscn" id="1_uyaia"]
 [ext_resource type="PackedScene" uid="uid://bdhgxihnvqm3e" path="res://Scenes/kineplayer.tscn" id="3_ve8hx"]
 [ext_resource type="PackedScene" uid="uid://bolikhkndwuga" path="res://Scenes/trajectory.tscn" id="4_0du1n"]
+
+[sub_resource type="Gradient" id="Gradient_x38h8"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="Cat" type="Node2D"]
 z_index = 2
@@ -13,6 +16,7 @@ width = 0.0
 vel_multiplier = 2.0
 
 [node name="player" parent="." instance=ExtResource("3_ve8hx")]
-position = Vector2(171, 756)
 
 [node name="Trajectory" parent="." instance=ExtResource("4_0du1n")]
+gradient = SubResource("Gradient_x38h8")
+texture_mode = 2
