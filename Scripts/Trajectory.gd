@@ -40,5 +40,6 @@ func _process(delta):
 		show()
 		update_trajectory(delta)
 	else:
+		dragline.visible = false
 		hide()
 	pass

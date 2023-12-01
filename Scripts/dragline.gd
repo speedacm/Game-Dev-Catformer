@@ -9,8 +9,13 @@ var vec_start := Vector2.ZERO # starting point of dragline
 var vec_fin := Vector2.ZERO # ending point of dragline
 var jump_attempt = false
 var hopping = false
+var falling = false
 
 signal jumped()
+
+func _process(delta):
+	JumpCancel()
+
 
 func _ready():
 	connect("jumped", ui._on_jump)
@@ -45,8 +50,19 @@ func _input(event: InputEvent) -> void:
 			else:
 					player.velocity = (vel) - velAdjust
 			hide()
-		if Input.is_action_just_pressed("c"):
-			jump_attempt = false
-		else:
-			hide()
+
+		JumpCancel()
+
+func JumpCancel():
+	if Input.is_action_just_pressed("c") || falling:
+		jump_attempt = false
+	hide()
+
+
+func _on_falling():
+	print("falling")
+	jump_attempt = false
+	visible = false
+	hide()
+	
 		
