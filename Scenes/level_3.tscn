@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs02sbkdnpr5c"]
+
+[ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="1_e4frk"]
+[ext_resource type="PackedScene" uid="uid://cp13perh2nvvy" path="res://Scenes/movingPlatform.tscn" id="2_svbia"]
+
+[node name="level_3" type="Node2D"]
+
+[node name="platform3" parent="." instance=ExtResource("1_e4frk")]
+position = Vector2(0, 166)
+
+[node name="MovingPlatform2" parent="." instance=ExtResource("2_svbia")]
+position = Vector2(414, 7)
+
+[node name="platform" parent="MovingPlatform2" index="0"]
+position = Vector2(1040.2, 0)
+
+[node name="platform2" parent="." instance=ExtResource("1_e4frk")]
+position = Vector2(0, -558)
+scale = Vector2(2, 1)
+
+[node name="MovingPlatform" parent="." instance=ExtResource("2_svbia")]
+position = Vector2(-934, -589)
+
+[node name="platform" parent="MovingPlatform" index="0"]
+position = Vector2(1, 150)
+
+[node name="AnimationPlayer" parent="MovingPlatform/platform" index="2"]
+autoplay = "vert1"
+
+[editable path="MovingPlatform2"]
+[editable path="MovingPlatform"]

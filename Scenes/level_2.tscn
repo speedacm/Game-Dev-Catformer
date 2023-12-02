@@ -79,16 +79,22 @@ rotation = 1.5708
 position = Vector2(143, -7820)
 
 [node name="platform12" parent="." instance=ExtResource("1_2uu0x")]
-position = Vector2(-1656, -9243)
+position = Vector2(-921, -8530)
 rotation = -3.14159
 
 [node name="Scratch Pad6" parent="." instance=ExtResource("3_e1lhf")]
-position = Vector2(-784, -9704)
+position = Vector2(-49, -8991)
 
 [node name="platform13" parent="." instance=ExtResource("1_2uu0x")]
-position = Vector2(-461, -9972)
+position = Vector2(274, -9259)
 rotation = 1.5708
 
 [node name="platform14" parent="." instance=ExtResource("1_2uu0x")]
-position = Vector2(-473, -9384)
+position = Vector2(262, -8671)
 rotation = 1.5708
+
+[node name="platform15" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(-25, -9445)
+
+[node name="platform16" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(-828, -9920)
