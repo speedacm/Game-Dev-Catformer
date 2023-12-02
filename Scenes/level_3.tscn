@@ -27,5 +27,12 @@ position = Vector2(1, 150)
 [node name="AnimationPlayer" parent="MovingPlatform/platform" index="2"]
 autoplay = "vert1"
 
+[node name="MovingPlatform3" parent="." instance=ExtResource("2_svbia")]
+position = Vector2(-1415, -1769)
+
+[node name="AnimationPlayer" parent="MovingPlatform3/platform" index="2"]
+autoplay = "vert2"
+
 [editable path="MovingPlatform2"]
 [editable path="MovingPlatform"]
+[editable path="MovingPlatform3"]
