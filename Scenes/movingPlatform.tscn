@@ -1,23 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://cp13perh2nvvy"]
+[gd_scene load_steps=13 format=3 uid="uid://cp13perh2nvvy"]
 
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="1_i30jq"]
-
-[sub_resource type="Animation" id="Animation_dg2ue"]
-resource_name = "movementLoop"
-length = 2.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 0), Vector2(327, -352), Vector2(1, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_lsfr0"]
 resource_name = "hor1"
@@ -34,23 +17,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(1, 0), Vector2(1300, 0), Vector2(1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_pxovf"]
-resource_name = "vert1"
-length = 3.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 0), Vector2(1, -750), Vector2(1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_ogxux"]
@@ -70,6 +36,40 @@ tracks/0/keys = {
 "values": [Vector2(1, 0), Vector2(1, 300), Vector2(1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_dg2ue"]
+resource_name = "movementLoop"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 0), Vector2(327, -352), Vector2(1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pxovf"]
+resource_name = "vert1"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 0), Vector2(1, -750), Vector2(1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_r5cdj"]
 resource_name = "vert2"
 length = 3.0
@@ -87,22 +87,110 @@ tracks/0/keys = {
 "values": [Vector2(1, 0), Vector2(1, 750), Vector2(1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_lvyyl"]
+resource_name = "hor3"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(2000, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fmeo7"]
+resource_name = "vert3"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 0), Vector2(1, 375), Vector2(1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mbjvm"]
+resource_name = "vert4"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 0), Vector2(1, -450), Vector2(1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_eoisa"]
+resource_name = "vert5"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 0), Vector2(1, 450), Vector2(1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hvcew"]
+resource_name = "vert6"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 450), Vector2(1, 0), Vector2(1, 450)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r4ejq"]
 _data = {
 "hor1": SubResource("Animation_lsfr0"),
 "hor2": SubResource("Animation_ogxux"),
+"hor3": SubResource("Animation_lvyyl"),
 "movementLoop": SubResource("Animation_dg2ue"),
 "vert1": SubResource("Animation_pxovf"),
-"vert2": SubResource("Animation_r5cdj")
+"vert2": SubResource("Animation_r5cdj"),
+"vert3": SubResource("Animation_fmeo7"),
+"vert4": SubResource("Animation_mbjvm"),
+"vert5": SubResource("Animation_eoisa"),
+"vert6": SubResource("Animation_hvcew")
 }
 
 [node name="MovingPlatform" type="Node2D"]
 
 [node name="platform" parent="." instance=ExtResource("1_i30jq")]
-position = Vector2(1, 750)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="platform"]
-autoplay = "hor1"
 libraries = {
 "": SubResource("AnimationLibrary_r4ejq")
 }

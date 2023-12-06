@@ -12,7 +12,7 @@ position = Vector2(0, 166)
 position = Vector2(414, 7)
 
 [node name="platform" parent="MovingPlatform2" index="0"]
-position = Vector2(1040.2, 0)
+position = Vector2(884.32, 0)
 
 [node name="platform2" parent="." instance=ExtResource("1_e4frk")]
 position = Vector2(0, -558)
@@ -22,17 +22,60 @@ scale = Vector2(2, 1)
 position = Vector2(-934, -589)
 
 [node name="platform" parent="MovingPlatform" index="0"]
-position = Vector2(1, 150)
+position = Vector2(884.32, 0)
 
 [node name="AnimationPlayer" parent="MovingPlatform/platform" index="2"]
 autoplay = "vert1"
 
 [node name="MovingPlatform3" parent="." instance=ExtResource("2_svbia")]
-position = Vector2(-1415, -1769)
+position = Vector2(-1415, -2067)
+
+[node name="platform" parent="MovingPlatform3" index="0"]
+position = Vector2(884.32, 0)
 
 [node name="AnimationPlayer" parent="MovingPlatform3/platform" index="2"]
 autoplay = "vert2"
 
+[node name="platform4" parent="." instance=ExtResource("1_e4frk")]
+position = Vector2(-1001, -2270)
+
+[node name="MovingPlatform4" parent="." instance=ExtResource("2_svbia")]
+position = Vector2(-1001, -2716)
+
+[node name="platform" parent="MovingPlatform4" index="0"]
+position = Vector2(884.32, 0)
+
+[node name="AnimationPlayer" parent="MovingPlatform4/platform" index="2"]
+autoplay = "hor3"
+
+[node name="MovingPlatform5" parent="." instance=ExtResource("2_svbia")]
+position = Vector2(1556, -3126)
+
+[node name="platform" parent="MovingPlatform5" index="0"]
+position = Vector2(520.6, 0)
+
+[node name="AnimationPlayer" parent="MovingPlatform5/platform" index="2"]
+autoplay = "vert3"
+
+[node name="MovingPlatform6" parent="." instance=ExtResource("2_svbia")]
+position = Vector2(258, -3708)
+
+[node name="platform" parent="MovingPlatform6" index="0"]
+position = Vector2(1, -450)
+
+[node name="AnimationPlayer" parent="MovingPlatform6/platform" index="2"]
+autoplay = "vert4"
+
+[node name="platform5" parent="." instance=ExtResource("1_e4frk")]
+position = Vector2(942, -3708)
+
+[node name="MovingPlatform7" parent="." instance=ExtResource("2_svbia")]
+position = Vector2(-394, -4586)
+
 [editable path="MovingPlatform2"]
 [editable path="MovingPlatform"]
 [editable path="MovingPlatform3"]
+[editable path="MovingPlatform4"]
+[editable path="MovingPlatform5"]
+[editable path="MovingPlatform6"]
+[editable path="MovingPlatform7"]
