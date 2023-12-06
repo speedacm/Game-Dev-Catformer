@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cs02sbkdnpr5c"]
+[gd_scene load_steps=4 format=3 uid="uid://1dqbqjl88jra"]
 
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="1_e4frk"]
 [ext_resource type="PackedScene" uid="uid://cp13perh2nvvy" path="res://Scenes/movingPlatform.tscn" id="2_svbia"]
+[ext_resource type="PackedScene" uid="uid://bichttx25c1lw" path="res://Scenes/lowfric.tscn" id="3_tmbp7"]
 
 [node name="level_3" type="Node2D"]
 
@@ -19,13 +20,59 @@ position = Vector2(0, -558)
 scale = Vector2(2, 1)
 
 [node name="MovingPlatform" parent="." instance=ExtResource("2_svbia")]
-position = Vector2(-934, -589)
+position = Vector2(-676, -758)
 
 [node name="platform" parent="MovingPlatform" index="0"]
-position = Vector2(1, 150)
+position = Vector2(1, -222.363)
 
 [node name="AnimationPlayer" parent="MovingPlatform/platform" index="2"]
 autoplay = "vert1"
 
+[node name="MovingPlatform3" parent="." instance=ExtResource("2_svbia")]
+position = Vector2(-13, -1836)
+
+[node name="platform" parent="MovingPlatform3" index="0"]
+position = Vector2(187.552, 0)
+
+[node name="AnimationPlayer" parent="MovingPlatform3/platform" index="2"]
+speed_scale = 0.5
+
+[node name="platform4" parent="." instance=ExtResource("1_e4frk")]
+position = Vector2(-1655, 146)
+
+[node name="MovingPlatform4" parent="." instance=ExtResource("2_svbia")]
+position = Vector2(-293, -2006)
+
+[node name="platform" parent="MovingPlatform4" index="0"]
+position = Vector2(310.537, 0)
+
+[node name="AnimationPlayer" parent="MovingPlatform4/platform" index="2"]
+speed_scale = 0.1
+
+[node name="MovingPlatform5" parent="." instance=ExtResource("2_svbia")]
+position = Vector2(-1385, -2231)
+
+[node name="platform" parent="MovingPlatform5" index="0"]
+position = Vector2(1110.04, 0)
+
+[node name="AnimationPlayer" parent="MovingPlatform5/platform" index="2"]
+speed_scale = 0.5
+
+[node name="MovingPlatform6" parent="." instance=ExtResource("2_svbia")]
+position = Vector2(-805, -2534)
+
+[node name="platform" parent="MovingPlatform6" index="0"]
+position = Vector2(731.567, 0)
+
+[node name="AnimationPlayer" parent="MovingPlatform6/platform" index="2"]
+speed_scale = 0.05
+
+[node name="lowfricplat" parent="." instance=ExtResource("3_tmbp7")]
+position = Vector2(464, -2874)
+
 [editable path="MovingPlatform2"]
 [editable path="MovingPlatform"]
+[editable path="MovingPlatform3"]
+[editable path="MovingPlatform4"]
+[editable path="MovingPlatform5"]
+[editable path="MovingPlatform6"]
