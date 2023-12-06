@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bdxcqf3uc23ig"]
 
-[ext_resource type="Texture2D" path="res://Asset_Pack/Social/sign.png" id="1_61e3c"]
+[ext_resource type="Texture2D" uid="uid://dwfkv632j80q1" path="res://Asset_Pack/Social/sign.png" id="1_61e3c"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_708yc"]
 font_size = 20

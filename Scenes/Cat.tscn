@@ -16,7 +16,6 @@ width = 0.0
 vel_multiplier = 2.0
 
 [node name="player" parent="." instance=ExtResource("3_ve8hx")]
-position = Vector2(0, -18500)
 
 [node name="Trajectory" parent="." instance=ExtResource("4_0du1n")]
 points = PackedVector2Array(-31, -16033)
