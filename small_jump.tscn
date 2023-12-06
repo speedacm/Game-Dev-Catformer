@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cji6l52qjl0ot"]
+
+[ext_resource type="Texture2D" path="res://Asset_Pack/Social/sign.png" id="1_8iqtt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4jclo"]
+font_size = 20
+
+[node name="small jump" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(227.875, 302.5)
+scale = Vector2(0.297387, 0.245522)
+texture = ExtResource("1_8iqtt")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 91.0
+offset_top = 198.0
+offset_right = 309.0
+offset_bottom = 289.0
+text = "You can get here by using a
+small jump.
+Press spacebar to do a small
+jump."
+label_settings = SubResource("LabelSettings_4jclo")

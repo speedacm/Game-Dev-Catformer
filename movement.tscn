@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdxcqf3uc23ig"]
+
+[ext_resource type="Texture2D" path="res://Asset_Pack/Social/sign.png" id="1_61e3c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_708yc"]
+font_size = 20
+
+[node name="movement" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(204.25, 211.063)
+scale = Vector2(0.274078, 0.246444)
+texture = ExtResource("1_61e3c")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 87.0
+offset_top = 111.0
+offset_right = 340.0
+offset_bottom = 235.0
+text = "Welcome To CatFormer!
+To move around, use the
+left and right arrow keys."
+label_settings = SubResource("LabelSettings_708yc")

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://g6bx2p411obg"]
+
+[ext_resource type="Texture2D" path="res://Asset_Pack/Social/sign.png" id="1_6dfgv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gn6x8"]
+font_size = 20
+
+[node name="Big jump" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(235.063, 242.156)
+scale = Vector2(0.266265, 0.229386)
+texture = ExtResource("1_6dfgv")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 111.0
+offset_top = 135.0
+offset_right = 323.0
+offset_bottom = 239.0
+text = "To get here, you need to
+use a big jump.
+Right click and drag to do 
+a big jump!"
+label_settings = SubResource("LabelSettings_gn6x8")
