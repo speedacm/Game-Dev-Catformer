@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://c444jvp5832r7" path="res://Scenes/ui/Puffy-gxW55.otf" id="1_p6rdn"]
 
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t3bbr"]
 bg_color = Color(1, 1, 1, 0.117647)
 

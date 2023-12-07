@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/kineplayer.gd" id="1_n43a3"]
 [ext_resource type="Texture2D" uid="uid://cn7ba0w3a4pc8" path="res://Cat Animations/GameDevCatformer(SpriteSheet2).png" id="2_8e8k0"]
 [ext_resource type="Texture2D" uid="uid://tioi4gw3blxq" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="3_1eeqk"]
+
 [ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="3_xp0tx"]
 [ext_resource type="Script" path="res://Scenes/UILine.gd" id="4_88xvk"]
 

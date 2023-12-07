@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bdxcqf3uc23ig" path="res://movement.tscn" id="3_mvs5c"]
 [ext_resource type="PackedScene" uid="uid://8t3nkhq5682t" path="res://Scenes/ui/ui.tscn" id="4_16v5a"]
 [ext_resource type="PackedScene" uid="uid://c5ddg4hklvrhf" path="res://scratching_post.tscn" id="4_tkvdw"]
+
 [ext_resource type="PackedScene" uid="uid://oq3ifdx0g0si" path="res://Scenes/level_2.tscn" id="5_woty0"]
 [ext_resource type="PackedScene" uid="uid://cs02sbkdnpr5c" path="res://Scenes/level_3.tscn" id="6_quqe4"]
 
