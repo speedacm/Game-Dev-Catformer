@@ -119,9 +119,6 @@ position = Vector2(-1635, -6529)
 [node name="MovingPlatform11" parent="." instance=ExtResource("2_svbia")]
 position = Vector2(-1633, -7100)
 
-[node name="platform" parent="MovingPlatform11" index="0"]
-position = Vector2(1, 0)
-
 [node name="AnimationPlayer" parent="MovingPlatform11/platform" index="2"]
 autoplay = "hor6"
 
