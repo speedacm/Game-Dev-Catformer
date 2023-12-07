@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://h32gt51wlunb"]
 
 [ext_resource type="Script" path="res://scratch_pad.gd" id="1_8ippc"]
-[ext_resource type="Texture2D" uid="uid://8n67n8ha16gd" path="res://Asset_Pack/statics/Game-Dev-Catformer - Scratchpad.png" id="2_3qvi1"]
+[ext_resource type="Texture2D" uid="uid://cnjm2tn2rjnul" path="res://Asset_Pack/statics/Game-Dev-Catformer - Scratchpad.png" id="2_3qvi1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_roi12"]
 size = Vector2(501, 637)
