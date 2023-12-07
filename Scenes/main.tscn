@@ -1,15 +1,37 @@
-[gd_scene load_steps=7 format=3 uid="uid://1n7w55oq1quq"]
+[gd_scene load_steps=12 format=3 uid="uid://1n7w55oq1quq"]
 
 [ext_resource type="PackedScene" uid="uid://boo4b1j3w2q34" path="res://Scenes/Cat.tscn" id="1_6nmq3"]
+[ext_resource type="PackedScene" uid="uid://cji6l52qjl0ot" path="res://small_jump.tscn" id="1_hcqqw"]
+[ext_resource type="PackedScene" uid="uid://bfq8urkayds6q" path="res://jump_cancel.tscn" id="1_isrfb"]
 [ext_resource type="PackedScene" uid="uid://bv5iafq5y71bk" path="res://Scenes/map.tscn" id="2_faqfv"]
+[ext_resource type="PackedScene" uid="uid://g6bx2p411obg" path="res://big_jump.tscn" id="2_v30ws"]
 [ext_resource type="PackedScene" uid="uid://dfqajoqvr05i8" path="res://Scenes/ui/main_menu.tscn" id="3_hpv0y"]
-[ext_resource type="PackedScene" path="res://Scenes/ui/ui.tscn" id="4_16v5a"]
+[ext_resource type="PackedScene" uid="uid://bdxcqf3uc23ig" path="res://movement.tscn" id="3_mvs5c"]
+[ext_resource type="PackedScene" uid="uid://8t3nkhq5682t" path="res://Scenes/ui/ui.tscn" id="4_16v5a"]
+[ext_resource type="PackedScene" uid="uid://c5ddg4hklvrhf" path="res://scratching_post.tscn" id="4_tkvdw"]
+
 [ext_resource type="PackedScene" uid="uid://oq3ifdx0g0si" path="res://Scenes/level_2.tscn" id="5_woty0"]
 [ext_resource type="PackedScene" uid="uid://cs02sbkdnpr5c" path="res://Scenes/level_3.tscn" id="6_quqe4"]
 
 [node name="Main" type="Node2D"]
 
+[node name="jump cancel" parent="." instance=ExtResource("1_isrfb")]
+position = Vector2(-1346, 476)
+
+[node name="small jump" parent="." instance=ExtResource("1_hcqqw")]
+position = Vector2(737, 313)
+
+[node name="Big jump" parent="." instance=ExtResource("2_v30ws")]
+position = Vector2(231, -6)
+
+[node name="movement" parent="." instance=ExtResource("3_mvs5c")]
+position = Vector2(233, 543)
+
+[node name="scratching post" parent="." instance=ExtResource("4_tkvdw")]
+position = Vector2(-127, -9003)
+
 [node name="Cat" parent="." instance=ExtResource("1_6nmq3")]
+position = Vector2(105, -4)
 metadata/_edit_group_ = true
 
 [node name="Level1" parent="." instance=ExtResource("2_faqfv")]
