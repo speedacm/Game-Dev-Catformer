@@ -104,4 +104,3 @@ position = Vector2(-828, -9920)
 
 [node name="platform18" parent="." instance=ExtResource("1_2uu0x")]
 position = Vector2(-1259, -9683)
-

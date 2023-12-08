@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://cdqydwartk8a6" path="res://Scenes/highfric.tscn" id="3_wdpxp"]
 [ext_resource type="PackedScene" path="res://Scenes/jumpguide.tscn" id="4_7u5rx"]
 
-
 [node name="level_3" type="Node2D"]
 
 [node name="platform3" parent="." instance=ExtResource("1_e4frk")]
@@ -17,7 +16,6 @@ position = Vector2(414, 7)
 [node name="platform" parent="MovingPlatform2" index="0"]
 position = Vector2(884.32, 0)
 
-
 [node name="platform2" parent="." instance=ExtResource("1_e4frk")]
 position = Vector2(0, -558)
 scale = Vector2(2, 1)
@@ -27,7 +25,6 @@ position = Vector2(-934, -589)
 
 [node name="platform" parent="MovingPlatform" index="0"]
 position = Vector2(884.32, 0)
-
 
 [node name="AnimationPlayer" parent="MovingPlatform/platform" index="2"]
 autoplay = "vert1"
@@ -139,4 +136,3 @@ autoplay = "hor6"
 [editable path="MovingPlatform9"]
 [editable path="MovingPlatform10"]
 [editable path="MovingPlatform11"]
-
