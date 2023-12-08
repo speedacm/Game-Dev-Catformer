@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://bv5iafq5y71bk"]
+[gd_scene load_steps=9 format=3 uid="uid://bv5iafq5y71bk"]
 
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="2_kcbli"]
 [ext_resource type="Texture2D" uid="uid://mi21lreu1nji" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="2_wne3f"]
 [ext_resource type="PackedScene" uid="uid://cnjh6epg3xgit" path="res://Scenes/floor.tscn" id="3_7brpr"]
-[ext_resource type="PackedScene" uid="uid://br1drugah1lkp" path="res://Scenes/jumpguide.tscn" id="4_4jxh7"]
+[ext_resource type="PackedScene" path="res://Scenes/jumpguide.tscn" id="4_4jxh7"]
 [ext_resource type="PackedScene" uid="uid://bichttx25c1lw" path="res://Scenes/lowfric.tscn" id="5_q510l"]
 [ext_resource type="PackedScene" uid="uid://cdqydwartk8a6" path="res://Scenes/highfric.tscn" id="6_hdb2k"]
-[ext_resource type="PackedScene" uid="uid://ckbt8x02s0o6u" path="res://Scenes/width_guide.tscn" id="7_o437w"]
+[ext_resource type="PackedScene" path="res://Scenes/width_guide.tscn" id="7_o437w"]
+[ext_resource type="PackedScene" uid="uid://k078aqvuo86g" path="res://Scenes/TutorialScenes/big_jump.tscn" id="8_p86uo"]
 
 [node name="Level1" type="Node2D"]
 
@@ -14,17 +15,15 @@
 position = Vector2(383, -1023)
 
 [node name="background" type="Sprite2D" parent="."]
-visible = false
 z_index = -3
 z_as_relative = false
-position = Vector2(639, -9272)
-rotation = -0.00872784
-scale = Vector2(13.9983, 37.0256)
+position = Vector2(639, -3728.08)
+scale = Vector2(13.9983, 18.9082)
 texture = ExtResource("2_wne3f")
 
 [node name="floor" parent="." instance=ExtResource("3_7brpr")]
-position = Vector2(700, 1152)
-scale = Vector2(1.6, 1.6)
+position = Vector2(404, 1152)
+scale = Vector2(2.12, 1.6)
 
 [node name="platform2" parent="." instance=ExtResource("2_kcbli")]
 position = Vector2(1579, 946)
@@ -56,9 +55,6 @@ position = Vector2(-138, -2436)
 [node name="platform12" parent="." instance=ExtResource("2_kcbli")]
 position = Vector2(-705, -2867)
 
-[node name="platform13" parent="." instance=ExtResource("2_kcbli")]
-position = Vector2(1028, -3381)
-
 [node name="Node2D" parent="." instance=ExtResource("4_4jxh7")]
 position = Vector2(713, -7274)
 
@@ -81,7 +77,7 @@ position = Vector2(-998, -3981)
 position = Vector2(234, -4189)
 
 [node name="highfricplat4" parent="." instance=ExtResource("6_hdb2k")]
-position = Vector2(-502, -7677)
+position = Vector2(-362, -7623)
 
 [node name="highfricplat3" parent="." instance=ExtResource("6_hdb2k")]
 position = Vector2(-608, -6255)
@@ -97,15 +93,80 @@ scale = Vector2(3.07602, 1)
 position = Vector2(160.272, -955)
 scale = Vector2(0.943394, 1)
 
-[node name="highfricplat" parent="." instance=ExtResource("6_hdb2k")]
-position = Vector2(573, -4184)
-
 [node name="lowfricplat3" parent="." instance=ExtResource("5_q510l")]
 position = Vector2(-215, -5362)
 
 [node name="lowfricplat5" parent="." instance=ExtResource("5_q510l")]
-position = Vector2(-140, -7624)
+position = Vector2(-83, -7588)
 scale = Vector2(0.943394, 1)
 
 [node name="WidthGuide" parent="." instance=ExtResource("7_o437w")]
 position = Vector2(15, 0)
+
+[node name="highfricplat5" parent="." instance=ExtResource("6_hdb2k")]
+position = Vector2(1027, -3374)
+
+[node name="platform13" parent="." instance=ExtResource("2_kcbli")]
+position = Vector2(-705, -3561)
+
+[node name="floor2" parent="." instance=ExtResource("3_7brpr")]
+position = Vector2(411, 1402)
+scale = Vector2(2.12832, 4.73259)
+
+[node name="Big jump" parent="." groups=["Signs"] instance=ExtResource("8_p86uo")]
+position = Vector2(1061, 314)
+scale = Vector2(1.5, 1.5)
+
+[node name="Big jump3" parent="." groups=["Signs"] instance=ExtResource("8_p86uo")]
+position = Vector2(1599, 1203)
+scale = Vector2(1.5, 1.5)
+metadata/_edit_group_ = true
+
+[node name="Label" parent="Big jump3" index="1"]
+text = "You can reach this 
+platform with a short  hop
+
+Use SPACE to execute a
+short hop
+"
+
+[node name="Big jump2" parent="." groups=["Signs"] instance=ExtResource("8_p86uo")]
+position = Vector2(297, 805)
+scale = Vector2(1.5, 1.5)
+
+[node name="Label" parent="Big jump2" index="1"]
+text = "Welcome to CatFOrmer!
+
+To Move left and right use
+a & D (or the left and
+right arrows)
+
+To Sprint, Use W (or alt)
+"
+
+[node name="Big jump4" parent="." groups=["Signs"] instance=ExtResource("8_p86uo")]
+position = Vector2(-95, -519)
+scale = Vector2(1.5, 1.5)
+metadata/_edit_group_ = true
+
+[node name="Label" parent="Big jump4" index="1"]
+text = "Press C or Right Click to
+cancel a jump.
+"
+
+[node name="Big jump5" parent="." groups=["Signs"] instance=ExtResource("8_p86uo")]
+z_index = -4
+position = Vector2(-228, -4081)
+scale = Vector2(1.5, 1.5)
+metadata/_edit_group_ = true
+
+[node name="Label" parent="Big jump5" index="1"]
+text = "You can Use W (Sprint) in 
+combonation with the 
+short hope to clear 
+close jumps"
+
+[editable path="Big jump3"]
+[editable path="Big jump2"]
+[editable path="Big jump4"]
+[editable path="Big jump5"]

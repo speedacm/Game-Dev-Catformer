@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc3ngwu105pr4"]
+
+[ext_resource type="Script" path="res://Scripts/victory_area.gd" id="1_xx5y1"]
+[ext_resource type="FontFile" uid="uid://ddporor6kghk5" path="res://Scenes/ui/Puffy-gxW55.otf" id="2_nvhfc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6haj8"]
+
+[node name="VictoryArea" type="Node2D"]
+script = ExtResource("1_xx5y1")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(24.7922, 20.3446)
+shape = SubResource("RectangleShape2D_6haj8")
+
+[node name="VictoryUI" type="CanvasLayer" parent="."]
+visible = false
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
+
+[node name="FinalTime" type="Label" parent="VictoryUI"]
+offset_left = 137.5
+offset_top = 199.5
+offset_right = 462.5
+offset_bottom = 257.5
+theme_override_fonts/font = ExtResource("2_nvhfc")
+theme_override_font_sizes/font_size = 70
+text = "Final Time
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="FinalJumps" type="Label" parent="VictoryUI"]
+offset_left = 1354.5
+offset_top = 221.5
+offset_right = 1791.5
+offset_bottom = 279.5
+theme_override_fonts/font = ExtResource("2_nvhfc")
+theme_override_font_sizes/font_size = 70
+text = "Total  Jumps
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="VictoryLabel" type="Label" parent="VictoryUI"]
+offset_left = 689.5
+offset_top = 75.5
+offset_right = 1163.5
+offset_bottom = 157.5
+theme_override_fonts/font = ExtResource("2_nvhfc")
+theme_override_font_sizes/font_size = 100
+text = "You Did it!"
+metadata/_edit_use_anchors_ = true
+
+[node name="timeout" type="Label" parent="VictoryUI"]
+offset_left = 218.5
+offset_top = 335.5
+offset_right = 273.5
+offset_bottom = 401.5
+theme_override_fonts/font = ExtResource("2_nvhfc")
+theme_override_font_sizes/font_size = 80
+text = "0
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="jumpsout" type="Label" parent="VictoryUI"]
+offset_left = 1495.5
+offset_top = 311.5
+offset_right = 1550.5
+offset_bottom = 377.5
+theme_override_fonts/font = ExtResource("2_nvhfc")
+theme_override_font_sizes/font_size = 80
+text = "0
+"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

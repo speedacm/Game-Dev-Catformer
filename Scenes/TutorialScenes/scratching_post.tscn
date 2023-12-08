@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://fbaemvllyk03"]
+
+[ext_resource type="Texture2D" uid="uid://b21b4r28lgmbu" path="res://Asset_Pack/Social/sign.png" id="1_4dl2x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jfe1q"]
+font_size = 20
+
+[node name="scratching post" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(200.125, 200.813)
+scale = Vector2(0.288678, 0.209036)
+texture = ExtResource("1_4dl2x")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 77.0
+offset_top = 120.0
+offset_right = 337.0
+offset_bottom = 203.0
+text = "This is the scratching post.
+Hold E to hold on to it/"
+label_settings = SubResource("LabelSettings_jfe1q")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddtycciy0ke88"]
+
+[ext_resource type="Texture2D" uid="uid://b21b4r28lgmbu" path="res://Asset_Pack/Social/sign.png" id="1_h1ukg"]
+
+[node name="jump cancel" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(189.375, 254.094)
+scale = Vector2(0.27792, 0.193691)
+texture = ExtResource("1_h1ukg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 65.0
+offset_top = 169.0
+offset_right = 335.0
+offset_bottom = 264.0
+text = "you can jump cancel. 
+To Jump cancel, press C or Right
+ click."

@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
 @onready var sleeping = true
-
 @onready var dragline = get_parent().get_node("dragline")
+
+
 const SPEED = 600.0
 const SMALL_JUMP_VELOCITY = -700
 const JUMP_VELOCITY = -400.0
@@ -46,9 +47,14 @@ func _physics_process(delta):
 		Hold()
 		
 		AnimatePlayer()
+		
+		
+
 			
 
 #Function Defintions
+	
+	
 
 func AnimatePlayer():
 	if (velocity.x>0): $Sprite2D.flip_h = false 

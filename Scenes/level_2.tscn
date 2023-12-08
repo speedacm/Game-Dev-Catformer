@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://oq3ifdx0g0si"]
+[gd_scene load_steps=9 format=3 uid="uid://oq3ifdx0g0si"]
 
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="1_2uu0x"]
 [ext_resource type="PackedScene" uid="uid://bichttx25c1lw" path="res://Scenes/lowfric.tscn" id="2_qhm5k"]
 [ext_resource type="PackedScene" uid="uid://h32gt51wlunb" path="res://Scenes/scratch_pad.tscn" id="3_e1lhf"]
-[ext_resource type="PackedScene" uid="uid://ckbt8x02s0o6u" path="res://Scenes/width_guide.tscn" id="4_0t7mk"]
-[ext_resource type="PackedScene" uid="uid://br1drugah1lkp" path="res://Scenes/jumpguide.tscn" id="4_6ki0e"]
+[ext_resource type="PackedScene" path="res://Scenes/width_guide.tscn" id="4_0t7mk"]
+[ext_resource type="PackedScene" path="res://Scenes/jumpguide.tscn" id="4_6ki0e"]
 [ext_resource type="PackedScene" uid="uid://cdqydwartk8a6" path="res://Scenes/highfric.tscn" id="6_ieauc"]
+[ext_resource type="PackedScene" uid="uid://k078aqvuo86g" path="res://Scenes/TutorialScenes/big_jump.tscn" id="7_uon1p"]
+[ext_resource type="Texture2D" uid="uid://bsbi3nw6kew6q" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="8_8mebk"]
 
 [node name="level 2" type="Node2D"]
 
@@ -30,6 +32,10 @@ position = Vector2(1096, -817)
 [node name="Node2D" parent="." instance=ExtResource("4_6ki0e")]
 position = Vector2(1213, -8516)
 
+[node name="platform17" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(1781, -1808)
+rotation = -1.5708
+
 [node name="platform4" parent="." instance=ExtResource("1_2uu0x")]
 position = Vector2(1659, -1642)
 
@@ -37,7 +43,7 @@ position = Vector2(1659, -1642)
 position = Vector2(-962, -1636)
 
 [node name="lowfricplat" parent="." instance=ExtResource("2_qhm5k")]
-position = Vector2(-444, -2789)
+position = Vector2(-448, -2703)
 
 [node name="platform6" parent="." instance=ExtResource("1_2uu0x")]
 position = Vector2(-1316, -2426)
@@ -56,7 +62,6 @@ position = Vector2(-1198, -4833)
 
 [node name="lowfricplat3" parent="." instance=ExtResource("2_qhm5k")]
 position = Vector2(-714, -5945)
-rotation = -0.525967
 
 [node name="Scratch Pad4" parent="." instance=ExtResource("3_e1lhf")]
 position = Vector2(101, -6470)
@@ -98,3 +103,38 @@ position = Vector2(-25, -9445)
 
 [node name="platform16" parent="." instance=ExtResource("1_2uu0x")]
 position = Vector2(-828, -9920)
+
+[node name="platform18" parent="." instance=ExtResource("1_2uu0x")]
+position = Vector2(-1259, -9683)
+
+[node name="Big jump" parent="." groups=["signs"] instance=ExtResource("7_uon1p")]
+position = Vector2(26, -634)
+
+[node name="Label" parent="Big jump" index="1"]
+text = "THis is a scratchpad,
+
+Hold E while jumping over
+it to grab on. You can 
+execute another big jump 
+after holding."
+
+[node name="Big jump2" parent="." groups=["signs"] instance=ExtResource("7_uon1p")]
+position = Vector2(1081, -1219)
+metadata/_edit_group_ = true
+
+[node name="Label" parent="Big jump2" index="1"]
+text = "That's It! Good Luck!
+
+You can disable the 
+tutorial signs in the main
+menu screen."
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -3
+z_as_relative = false
+position = Vector2(591, -4879)
+scale = Vector2(13.9983, 18.9082)
+texture = ExtResource("8_8mebk")
+
+[editable path="Big jump"]
+[editable path="Big jump2"]
