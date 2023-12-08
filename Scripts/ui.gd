@@ -3,13 +3,14 @@ extends CanvasLayer
 @onready var timer = get_node('Timer')
 @onready var timerOut = get_node('TimerOut')
 @onready var jumpCounterOut = get_node('JumpOut')
+@onready var highestprogOut = get_node('HighestProgOut')
 @onready var player = get_parent().get_node('Cat').get_node('player')
 
 @onready var secCount = 0
 @onready var minCount = 0
 @onready var started = false
 @onready var jumpCounter = 0
-
+@onready var highestpos = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,6 +22,16 @@ func _process(delta):
 		timer.start()
 		started = true
 	check_reset_timer()
+	
+	highestprog()
+
+func highestprog():
+	var position = player.position.y
+	if position < highestpos:
+		highestpos = position
+		highestprogOut.text = ":%02d" % (-highestpos/400) + "/100"
+		
+	
 
 
 func _on_timer_timeout():

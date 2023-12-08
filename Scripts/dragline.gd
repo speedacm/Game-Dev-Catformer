@@ -54,7 +54,7 @@ func _input(event: InputEvent) -> void:
 		JumpCancel()
 
 func JumpCancel():
-	if Input.is_action_just_pressed("c") || falling:
+	if Input.is_action_just_pressed("c") || Input.is_action_just_pressed("rightclick") || falling:
 		jump_attempt = false
 	hide()
 

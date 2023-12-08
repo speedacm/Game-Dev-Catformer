@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://oq3ifdx0g0si"]
+[gd_scene load_steps=9 format=3 uid="uid://oq3ifdx0g0si"]
 
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="1_2uu0x"]
 [ext_resource type="PackedScene" uid="uid://bichttx25c1lw" path="res://Scenes/lowfric.tscn" id="2_qhm5k"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://br1drugah1lkp" path="res://Scenes/jumpguide.tscn" id="4_6ki0e"]
 [ext_resource type="PackedScene" uid="uid://cdqydwartk8a6" path="res://Scenes/highfric.tscn" id="6_ieauc"]
 [ext_resource type="PackedScene" uid="uid://k078aqvuo86g" path="res://Scenes/TutorialScenes/big_jump.tscn" id="7_uon1p"]
+[ext_resource type="Texture2D" uid="uid://c2kfms1wh23nx" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="8_8mebk"]
 
 [node name="level 2" type="Node2D"]
 
@@ -127,6 +128,13 @@ text = "That's It! Good Luck!
 You can disable the 
 tutorial signs in the main
 menu screen."
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -3
+z_as_relative = false
+position = Vector2(591, -4879)
+scale = Vector2(13.9983, 18.9082)
+texture = ExtResource("8_8mebk")
 
 [editable path="Big jump"]
 [editable path="Big jump2"]
