@@ -115,20 +115,16 @@ position = Vector2(-705, -3561)
 position = Vector2(411, 1402)
 scale = Vector2(2.12832, 4.73259)
 
-[node name="Big jump" parent="." instance=ExtResource("8_p86uo")]
+[node name="Big jump" parent="." groups=["Signs"] instance=ExtResource("8_p86uo")]
 position = Vector2(1061, 314)
 scale = Vector2(1.5, 1.5)
 
-[node name="Big jump3" parent="." instance=ExtResource("8_p86uo")]
+[node name="Big jump3" parent="." groups=["Signs"] instance=ExtResource("8_p86uo")]
 position = Vector2(1599, 1203)
 scale = Vector2(1.5, 1.5)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" parent="Big jump3" index="0"]
-scale = Vector2(0.474628, 0.42423)
-
 [node name="Label" parent="Big jump3" index="1"]
-scale = Vector2(0.860353, 1.00646)
 text = "You can reach this 
 platform with a short  hop
 
@@ -136,15 +132,11 @@ Use SPACE to execute a
 short hop
 "
 
-[node name="Big jump2" parent="." instance=ExtResource("8_p86uo")]
+[node name="Big jump2" parent="." groups=["Signs"] instance=ExtResource("8_p86uo")]
 position = Vector2(297, 805)
 scale = Vector2(1.5, 1.5)
 
-[node name="Sprite2D" parent="Big jump2" index="0"]
-scale = Vector2(0.474628, 0.42423)
-
 [node name="Label" parent="Big jump2" index="1"]
-scale = Vector2(0.860353, 1.00646)
 text = "Welcome to CatFOrmer!
 
 To Move left and right use
@@ -154,31 +146,23 @@ right arrows)
 To Sprint, Use W (or up)
 "
 
-[node name="Big jump4" parent="." instance=ExtResource("8_p86uo")]
+[node name="Big jump4" parent="." groups=["Signs"] instance=ExtResource("8_p86uo")]
 position = Vector2(-95, -519)
 scale = Vector2(1.5, 1.5)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" parent="Big jump4" index="0"]
-scale = Vector2(0.474628, 0.42423)
-
 [node name="Label" parent="Big jump4" index="1"]
-scale = Vector2(0.860353, 1.00646)
 text = "Press C or Right Click to
 cancel a jump.
 "
 
-[node name="Big jump5" parent="." instance=ExtResource("8_p86uo")]
+[node name="Big jump5" parent="." groups=["Signs"] instance=ExtResource("8_p86uo")]
 z_index = -4
 position = Vector2(-228, -4081)
 scale = Vector2(1.5, 1.5)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" parent="Big jump5" index="0"]
-scale = Vector2(0.474628, 0.42423)
-
 [node name="Label" parent="Big jump5" index="1"]
-scale = Vector2(0.860353, 1.00646)
 text = "You can Use W (Sprint) in 
 combonation with the 
 short hope to clear 

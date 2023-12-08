@@ -106,7 +106,7 @@ position = Vector2(-828, -9920)
 [node name="platform18" parent="." instance=ExtResource("1_2uu0x")]
 position = Vector2(-1259, -9683)
 
-[node name="Big jump" parent="." instance=ExtResource("7_uon1p")]
+[node name="Big jump" parent="." groups=["signs"] instance=ExtResource("7_uon1p")]
 position = Vector2(26, -634)
 
 [node name="Label" parent="Big jump" index="1"]
@@ -117,7 +117,7 @@ it to grab on. You can
 execute another big jump 
 after holding."
 
-[node name="Big jump2" parent="." instance=ExtResource("7_uon1p")]
+[node name="Big jump2" parent="." groups=["signs"] instance=ExtResource("7_uon1p")]
 position = Vector2(1081, -1219)
 metadata/_edit_group_ = true
 
