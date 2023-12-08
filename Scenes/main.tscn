@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://1n7w55oq1quq"]
+[gd_scene load_steps=9 format=3 uid="uid://1n7w55oq1quq"]
 
 [ext_resource type="PackedScene" uid="uid://boo4b1j3w2q34" path="res://Scenes/Cat.tscn" id="1_6nmq3"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_k6jm1"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://8t3nkhq5682t" path="res://Scenes/ui/ui.tscn" id="4_16v5a"]
 [ext_resource type="PackedScene" uid="uid://oq3ifdx0g0si" path="res://Scenes/level_2.tscn" id="5_woty0"]
 [ext_resource type="PackedScene" uid="uid://cs02sbkdnpr5c" path="res://Scenes/level_3.tscn" id="6_quqe4"]
+[ext_resource type="PackedScene" uid="uid://cc3ngwu105pr4" path="res://Scenes/ui/victory_area.tscn" id="8_lxe71"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_k6jm1")
@@ -26,3 +27,6 @@ position = Vector2(10, -8698)
 
 [node name="level_3" parent="." instance=ExtResource("6_quqe4")]
 position = Vector2(-23, -19165)
+
+[node name="VictoryArea" parent="." instance=ExtResource("8_lxe71")]
+position = Vector2(898, -1408)
