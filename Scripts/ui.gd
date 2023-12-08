@@ -20,7 +20,7 @@ func _process(delta):
 	if not player.sleeping && started == false:
 		timer.start()
 		started = true
-	pass
+	check_reset_timer()
 
 
 func _on_timer_timeout():
@@ -30,6 +30,16 @@ func _on_timer_timeout():
 		secCount = 0
 	timerOut.text = "%d" % minCount + ":%02d" % secCount
 	pass # Replace with function body.
+	
+func check_reset_timer():
+	if player.position.y > 700:
+		print("timer reset")
+		secCount = 0
+		minCount = 0
+		timerOut.text = "%d" % minCount + ":%02d" % secCount
+		jumpCounter = 0
+		jumpCounterOut.text = str(jumpCounter)
+
 	
 func _on_jump():
 	jumpCounter += 1

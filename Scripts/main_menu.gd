@@ -32,6 +32,7 @@ func _ready():
 func _on_button_play_pressed():
 	var player = get_parent().get_node("Cat")
 	player.get_node('player').sleeping = false
+	get_parent().menuexists = false
 	queue_free()
 
 
@@ -50,6 +51,9 @@ func _on_button_close_tutorials_pressed():
 		else:
 			x.visible = true
 	pass # Replace with function body.
+	
+
+		
 	
 
 

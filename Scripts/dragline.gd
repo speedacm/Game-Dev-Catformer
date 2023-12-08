@@ -60,7 +60,6 @@ func JumpCancel():
 
 
 func _on_falling():
-	print("falling")
 	jump_attempt = false
 	visible = false
 	hide()
