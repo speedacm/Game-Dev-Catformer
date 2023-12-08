@@ -2,6 +2,9 @@ extends Control
 
 @onready var main_menu = $CanvasLayer
 @onready var playButton = $CanvasLayer/Buttons/ButtonsContainer/Button_Play
+@onready var player = get_parent().get_node("Cat")
+@onready var kinebody = player.get_node("player")
+@onready var anim = kinebody.get_node("AnimationPlayer")
 
 '''
 Additional notes:
@@ -23,14 +26,12 @@ func onSwitchScene():
 	get_tree().change_scene_to_file(startGame)
 
 func _ready():
+	anim.play("Sleep")
 	print("Main Menu Boot")
 
 func _on_button_play_pressed():
-	var player = get_parent().get_node("Cat")
-	player.get_node('player').sleeping = false
+	kinebody.sleeping = false
 	queue_free()
-
-
 
 func _on_button_quit_pressed():
 	get_tree().quit()
