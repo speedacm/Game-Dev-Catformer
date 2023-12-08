@@ -4,11 +4,11 @@
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_k6jm1"]
 [ext_resource type="PackedScene" uid="uid://bv5iafq5y71bk" path="res://Scenes/map.tscn" id="2_faqfv"]
 [ext_resource type="PackedScene" uid="uid://dfqajoqvr05i8" path="res://Scenes/ui/main_menu.tscn" id="3_hpv0y"]
-[ext_resource type="PackedScene" uid="uid://8t3nkhq5682t" path="res://Scenes/ui/ui.tscn" id="4_16v5a"]
+[ext_resource type="PackedScene" path="res://Scenes/ui/ui.tscn" id="4_16v5a"]
 [ext_resource type="PackedScene" uid="uid://oq3ifdx0g0si" path="res://Scenes/level_2.tscn" id="5_woty0"]
 [ext_resource type="PackedScene" uid="uid://cs02sbkdnpr5c" path="res://Scenes/level_3.tscn" id="6_quqe4"]
-[ext_resource type="PackedScene" uid="uid://cc3ngwu105pr4" path="res://Scenes/ui/victory_area.tscn" id="8_lxe71"]
-[ext_resource type="PackedScene" uid="uid://dfpf2sbrnymot" path="res://Scenes/level_4.tscn" id="9_enqju"]
+[ext_resource type="PackedScene" path="res://Scenes/ui/victory_area.tscn" id="8_lxe71"]
+[ext_resource type="PackedScene" uid="uid://bkr0335rgledp" path="res://Scenes/level_4.tscn" id="9_enqju"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_k6jm1")

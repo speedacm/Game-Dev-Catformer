@@ -1,18 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://dfpf2sbrnymot"]
+[gd_scene load_steps=9 format=3 uid="uid://bkr0335rgledp"]
 
-[ext_resource type="PackedScene" uid="uid://br1drugah1lkp" path="res://Scenes/jumpguide.tscn" id="1_3k65u"]
-[ext_resource type="PackedScene" uid="uid://ckbt8x02s0o6u" path="res://Scenes/width_guide.tscn" id="2_srswp"]
+[ext_resource type="PackedScene" path="res://Scenes/jumpguide.tscn" id="1_3k65u"]
+[ext_resource type="PackedScene" path="res://Scenes/width_guide.tscn" id="2_srswp"]
 [ext_resource type="PackedScene" uid="uid://h32gt51wlunb" path="res://Scenes/scratch_pad.tscn" id="3_sxeli"]
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="4_g6rb8"]
 [ext_resource type="PackedScene" uid="uid://bichttx25c1lw" path="res://Scenes/lowfric.tscn" id="5_pj3dr"]
 [ext_resource type="PackedScene" uid="uid://cp13perh2nvvy" path="res://Scenes/movingPlatform.tscn" id="6_xaq7h"]
 [ext_resource type="PackedScene" uid="uid://cdqydwartk8a6" path="res://Scenes/highfric.tscn" id="7_ss2v8"]
-[ext_resource type="Texture2D" uid="uid://c2kfms1wh23nx" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="8_brov1"]
+[ext_resource type="Texture2D" uid="uid://bsbi3nw6kew6q" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="8_brov1"]
 
 [node name="Level4" type="Node2D"]
 
 [node name="Node2D" parent="." instance=ExtResource("1_3k65u")]
-position = Vector2(-237, -3244)
+position = Vector2(-260, -8349)
 
 [node name="WidthGuide" parent="." instance=ExtResource("2_srswp")]
 position = Vector2(-726, 4)
@@ -36,7 +36,7 @@ position = Vector2(820, -676)
 position = Vector2(396, -2266)
 
 [node name="lowfricplat3" parent="." instance=ExtResource("5_pj3dr")]
-position = Vector2(806, -2403)
+position = Vector2(804, -2344)
 
 [node name="lowfricplat4" parent="." instance=ExtResource("5_pj3dr")]
 position = Vector2(5, -2164)
@@ -100,23 +100,30 @@ position = Vector2(-1219, -3138)
 position = Vector2(-358, -6842)
 
 [node name="Scratch Pad4" parent="." instance=ExtResource("3_sxeli")]
-position = Vector2(542, -8191)
+position = Vector2(537, -7999)
 
 [node name="Scratch Pad5" parent="." instance=ExtResource("3_sxeli")]
-position = Vector2(-1101, -9088)
+position = Vector2(-1052, -8738)
 
 [node name="Scratch Pad6" parent="." instance=ExtResource("3_sxeli")]
-position = Vector2(507, -10273)
+position = Vector2(492, -9918)
 
 [node name="Scratch Pad7" parent="." instance=ExtResource("3_sxeli")]
-position = Vector2(-611, -11595)
+position = Vector2(-522, -11776)
 
 [node name="background" type="Sprite2D" parent="."]
+visible = false
 z_index = -3
 z_as_relative = false
-position = Vector2(-21, -8595.04)
+position = Vector2(-24, -8574)
 scale = Vector2(13.9983, 29.4182)
 texture = ExtResource("8_brov1")
+
+[node name="highfricplat3" parent="." instance=ExtResource("7_ss2v8")]
+position = Vector2(-1753, -3784)
+
+[node name="Scratch Pad8" parent="." instance=ExtResource("3_sxeli")]
+position = Vector2(-1271, -10715)
 
 [editable path="MovingPlatform"]
 [editable path="MovingPlatform2"]

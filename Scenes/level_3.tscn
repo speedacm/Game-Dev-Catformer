@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="1_e4frk"]
 [ext_resource type="PackedScene" uid="uid://cp13perh2nvvy" path="res://Scenes/movingPlatform.tscn" id="2_svbia"]
 [ext_resource type="PackedScene" uid="uid://cdqydwartk8a6" path="res://Scenes/highfric.tscn" id="3_wdpxp"]
-[ext_resource type="PackedScene" uid="uid://br1drugah1lkp" path="res://Scenes/jumpguide.tscn" id="4_7u5rx"]
-[ext_resource type="Texture2D" uid="uid://c2kfms1wh23nx" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="5_geb7g"]
+[ext_resource type="PackedScene" path="res://Scenes/jumpguide.tscn" id="4_7u5rx"]
+[ext_resource type="Texture2D" uid="uid://bsbi3nw6kew6q" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="5_geb7g"]
 
 [node name="level_3" type="Node2D"]
 
@@ -119,9 +119,6 @@ position = Vector2(1121, -7723)
 
 [node name="MovingPlatform11" parent="." instance=ExtResource("2_svbia")]
 position = Vector2(-1633, -7100)
-
-[node name="platform" parent="MovingPlatform11" index="0"]
-position = Vector2(1, 0)
 
 [node name="AnimationPlayer" parent="MovingPlatform11/platform" index="2"]
 autoplay = "hor6"

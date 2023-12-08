@@ -3,11 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="1_2uu0x"]
 [ext_resource type="PackedScene" uid="uid://bichttx25c1lw" path="res://Scenes/lowfric.tscn" id="2_qhm5k"]
 [ext_resource type="PackedScene" uid="uid://h32gt51wlunb" path="res://Scenes/scratch_pad.tscn" id="3_e1lhf"]
-[ext_resource type="PackedScene" uid="uid://ckbt8x02s0o6u" path="res://Scenes/width_guide.tscn" id="4_0t7mk"]
-[ext_resource type="PackedScene" uid="uid://br1drugah1lkp" path="res://Scenes/jumpguide.tscn" id="4_6ki0e"]
+[ext_resource type="PackedScene" path="res://Scenes/width_guide.tscn" id="4_0t7mk"]
+[ext_resource type="PackedScene" path="res://Scenes/jumpguide.tscn" id="4_6ki0e"]
 [ext_resource type="PackedScene" uid="uid://cdqydwartk8a6" path="res://Scenes/highfric.tscn" id="6_ieauc"]
 [ext_resource type="PackedScene" uid="uid://k078aqvuo86g" path="res://Scenes/TutorialScenes/big_jump.tscn" id="7_uon1p"]
-[ext_resource type="Texture2D" uid="uid://c2kfms1wh23nx" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="8_8mebk"]
+[ext_resource type="Texture2D" uid="uid://bsbi3nw6kew6q" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="8_8mebk"]
 
 [node name="level 2" type="Node2D"]
 
