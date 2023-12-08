@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bdhgxihnvqm3e"]
+[gd_scene load_steps=17 format=3 uid="uid://bdhgxihnvqm3e"]
 
 [ext_resource type="Script" path="res://Scripts/kineplayer.gd" id="1_n43a3"]
 [ext_resource type="Texture2D" uid="uid://dbvi6i46xbx0w" path="res://Cat Animations/GameDevCatformer(SpriteSheet2).png" id="2_8e8k0"]
@@ -90,6 +90,39 @@ tracks/0/keys = {
 "values": [30, 31, 32, 33, 34]
 }
 
+[sub_resource type="Animation" id="Animation_e4rrc"]
+resource_name = "Sleep"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [40, 41, 42, 43, 44]
+}
+
+[sub_resource type="Animation" id="Animation_pifui"]
+resource_name = "Wake"
+length = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.16, 0.31, 0.46, 0.61),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [50, 51, 52, 53, 54, 55]
+}
+
 [sub_resource type="Animation" id="Animation_logl7"]
 resource_name = "Walk"
 length = 0.9
@@ -107,13 +140,33 @@ tracks/0/keys = {
 "values": [10, 11, 12, 13, 14, 15]
 }
 
+[sub_resource type="Animation" id="Animation_cvwf1"]
+resource_name = "Run"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 13, 14, 15]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wkack"]
 _data = {
 "Fall": SubResource("Animation_hokql"),
 "Idle": SubResource("Animation_2vv83"),
 "Jump Charge": SubResource("Animation_ton87"),
 "Jump_Release": SubResource("Animation_ddlkf"),
+"Run": SubResource("Animation_cvwf1"),
 "Scratchpad_Fall": SubResource("Animation_3lecs"),
+"Sleep": SubResource("Animation_e4rrc"),
+"Wake": SubResource("Animation_pifui"),
 "Walk": SubResource("Animation_logl7")
 }
 
@@ -127,8 +180,8 @@ position = Vector2(0, -22)
 scale = Vector2(0.432531, 0.443167)
 texture = ExtResource("2_8e8k0")
 hframes = 10
-vframes = 4
-frame = 26
+vframes = 6
+frame = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -162,4 +215,4 @@ libraries = {
 [node name="SlopeDetector" type="RayCast2D" parent="."]
 target_position = Vector2(0, 100)
 
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="wakeup_anim_finished"]
