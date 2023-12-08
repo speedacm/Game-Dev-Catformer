@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://k078aqvuo86g"]
+
+[ext_resource type="Texture2D" uid="uid://bvr0r3gsr7yn2" path="res://Scenes/TutorialScenes/tutorial sign sprite.png" id="1_seyy8"]
+[ext_resource type="FontFile" uid="uid://ddporor6kghk5" path="res://Scenes/ui/Puffy-gxW55.otf" id="2_rxhgq"]
+
+[node name="Big jump" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.474628, 0.42423)
+texture = ExtResource("1_seyy8")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -146.0
+offset_top = -81.0
+offset_right = 185.0
+offset_bottom = 77.0
+scale = Vector2(0.860353, 1.00646)
+theme_override_fonts/font = ExtResource("2_rxhgq")
+theme_override_font_sizes/font_size = 26
+text = "To get here, you need to
+use a big jump.
+
+Left click and drag to do 
+a big jump!
+"

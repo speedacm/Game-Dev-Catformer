@@ -69,10 +69,11 @@ size_flags_vertical = 3
 text = "Play
 "
 
-[node name="Button_Settings" type="Button" parent="CanvasLayer/Buttons/ButtonsContainer"]
+[node name="Button_CloseTutorials" type="Button" parent="CanvasLayer/Buttons/ButtonsContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Settings"
+text = "Toggle Tutorial
+"
 
 [node name="Button_Appendix" type="Button" parent="CanvasLayer/Buttons/ButtonsContainer"]
 visible = false
@@ -86,4 +87,5 @@ size_flags_vertical = 3
 text = "Quit"
 
 [connection signal="pressed" from="CanvasLayer/Buttons/ButtonsContainer/Button_Play" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/Buttons/ButtonsContainer/Button_CloseTutorials" to="." method="_on_button_close_tutorials_pressed"]
 [connection signal="pressed" from="CanvasLayer/Buttons/ButtonsContainer/Button_Quit" to="." method="_on_button_quit_pressed"]

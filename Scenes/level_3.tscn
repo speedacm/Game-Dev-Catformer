@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs02sbkdnpr5c"]
+[gd_scene load_steps=6 format=3 uid="uid://cs02sbkdnpr5c"]
 
 [ext_resource type="PackedScene" uid="uid://cxuchcpo4q2cs" path="res://Scenes/platform.tscn" id="1_e4frk"]
 [ext_resource type="PackedScene" uid="uid://cp13perh2nvvy" path="res://Scenes/movingPlatform.tscn" id="2_svbia"]
 [ext_resource type="PackedScene" uid="uid://cdqydwartk8a6" path="res://Scenes/highfric.tscn" id="3_wdpxp"]
 [ext_resource type="PackedScene" path="res://Scenes/jumpguide.tscn" id="4_7u5rx"]
+[ext_resource type="Texture2D" uid="uid://bsbi3nw6kew6q" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="5_geb7g"]
 
 [node name="level_3" type="Node2D"]
 
@@ -114,16 +115,23 @@ position = Vector2(-3000, 0)
 autoplay = "hor5"
 
 [node name="Node2D" parent="." instance=ExtResource("4_7u5rx")]
-position = Vector2(-1635, -6529)
+position = Vector2(1121, -7723)
 
 [node name="MovingPlatform11" parent="." instance=ExtResource("2_svbia")]
 position = Vector2(-1633, -7100)
 
-[node name="platform" parent="MovingPlatform11" index="0"]
-position = Vector2(1, 0)
-
 [node name="AnimationPlayer" parent="MovingPlatform11/platform" index="2"]
 autoplay = "hor6"
+
+[node name="platform7" parent="." instance=ExtResource("1_e4frk")]
+position = Vector2(-758, -6816)
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -3
+z_as_relative = false
+position = Vector2(639, -3728.08)
+scale = Vector2(13.9983, 18.9082)
+texture = ExtResource("5_geb7g")
 
 [editable path="MovingPlatform2"]
 [editable path="MovingPlatform"]
