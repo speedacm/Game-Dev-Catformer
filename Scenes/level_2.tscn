@@ -107,6 +107,17 @@ position = Vector2(-828, -9920)
 [node name="platform18" parent="." instance=ExtResource("1_2uu0x")]
 position = Vector2(-1259, -9683)
 
+[node name="Big jump3" parent="." groups=["signs"] instance=ExtResource("7_uon1p")]
+position = Vector2(1536, -1891)
+metadata/_edit_group_ = true
+
+[node name="Label" parent="Big jump3" index="1"]
+text = "!!Warning!!
+
+You must jump above a 
+scratchpad to jump from it 
+twice!!!"
+
 [node name="Big jump" parent="." groups=["signs"] instance=ExtResource("7_uon1p")]
 position = Vector2(26, -634)
 
@@ -132,9 +143,12 @@ menu screen."
 [node name="background" type="Sprite2D" parent="."]
 z_index = -3
 z_as_relative = false
-position = Vector2(591, -4879)
+
+position = Vector2(737, -4748)
 scale = Vector2(13.9983, 18.9082)
 texture = ExtResource("8_8mebk")
+
+[editable path="Big jump3"]
 
 [editable path="Big jump"]
 [editable path="Big jump2"]

@@ -50,6 +50,7 @@ func _input(event: InputEvent) -> void:
 			else:
 					player.velocity = (vel) - velAdjust
 			hide()
+			
 
 		JumpCancel()
 

@@ -2,6 +2,7 @@ extends Control
 
 @onready var main_menu = $CanvasLayer
 @onready var playButton = $CanvasLayer/Buttons/ButtonsContainer/Button_Play
+
 @onready var player = get_parent().get_node("Cat")
 @onready var kinebody = player.get_node("player")
 @onready var anim = kinebody.get_node("AnimationPlayer")

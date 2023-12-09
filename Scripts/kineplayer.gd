@@ -48,7 +48,9 @@ func _physics_process(delta):
 		
 		AnimatePlayer()
 		
-		
+		if(position.x > 1900): velocity.x = -1000
+		if(position.x < -2100): velocity.x = 1000
+
 
 			
 
@@ -99,6 +101,7 @@ func Hold():
 		if Holding: $AnimationPlayer.play("Scratchpad_Fall")
 		if Input.is_action_just_released("Click"):
 			canhold = false
+			print("hi")
 		else:
 			velocity = Vector2(0,30)
 		move_and_slide()

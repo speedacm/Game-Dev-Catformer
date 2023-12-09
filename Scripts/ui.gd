@@ -43,6 +43,7 @@ func _on_timer_timeout():
 	pass # Replace with function body.
 	
 func check_reset_timer():
+
 	if player.position.y > -200:
 		print("timer reset")
 		secCount = 0
