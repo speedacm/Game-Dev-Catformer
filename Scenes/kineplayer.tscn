@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://bdhgxihnvqm3e"]
 
 [ext_resource type="Script" path="res://Scripts/kineplayer.gd" id="1_n43a3"]
-[ext_resource type="Texture2D" uid="uid://dbvi6i46xbx0w" path="res://Cat Animations/GameDevCatformer(SpriteSheet2).png" id="2_8e8k0"]
-[ext_resource type="Texture2D" uid="uid://c2kfms1wh23nx" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="3_1eeqk"]
+[ext_resource type="Texture2D" uid="uid://ctw7kkrvtgm0y" path="res://Cat Animations/GameDevCatformer(SpriteSheet2).png" id="2_8e8k0"]
+[ext_resource type="Texture2D" uid="uid://b1j40utw4anm1" path="res://Asset_Pack/statics/Screenshot 2023-10-04 at 6.39.47 PM.png" id="3_1eeqk"]
 [ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="3_xp0tx"]
 [ext_resource type="Script" path="res://Scenes/UILine.gd" id="4_88xvk"]
 
@@ -74,6 +74,23 @@ tracks/0/keys = {
 "values": [23, 24, 25]
 }
 
+[sub_resource type="Animation" id="Animation_cvwf1"]
+resource_name = "Run"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 13, 14, 15]
+}
+
 [sub_resource type="Animation" id="Animation_3lecs"]
 resource_name = "Scratchpad_Fall"
 loop_mode = 1
@@ -135,23 +152,6 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6, 0.75),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [10, 11, 12, 13, 14, 15]
-}
-
-[sub_resource type="Animation" id="Animation_cvwf1"]
-resource_name = "Run"
-length = 0.3
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [10, 11, 12, 13, 14, 15]

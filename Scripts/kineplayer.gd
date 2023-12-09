@@ -108,7 +108,7 @@ func Hold():
 
 func TeleportBackToPlatform():
 	if position.y > 1800:
-		position.y = 485
+		position.y = 50
 		position.x = 544
 
 func UserMovement(delta):
