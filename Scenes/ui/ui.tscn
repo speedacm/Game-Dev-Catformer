@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://8t3nkhq5682t"]
 
-[ext_resource type="FontFile" uid="uid://ddporor6kghk5" path="res://Scenes/ui/Puffy-gxW55.otf" id="1_3n75p"]
+[ext_resource type="FontFile" uid="uid://bg3sgmjoqpncd" path="res://Scenes/ui/Puffy-gxW55.otf" id="1_3n75p"]
 [ext_resource type="Script" path="res://Scripts/ui.gd" id="1_aayaa"]
 
 [sub_resource type="Theme" id="Theme_lk6nl"]

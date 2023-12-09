@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfqajoqvr05i8"]
+[gd_scene load_steps=7 format=3 uid="uid://dfqajoqvr05i8"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_fbysq"]
 [ext_resource type="Theme" uid="uid://bwelnjre1lx7j" path="res://Scenes/ui/themes/theme_title.tres" id="1_qbrhj"]
-[ext_resource type="Texture2D" uid="uid://bqqtt32e27pr0" path="res://Asset_Pack/Background_0.png" id="1_vctw5"]
+[ext_resource type="Texture2D" uid="uid://bcmug2fkq1ybf" path="res://Asset_Pack/Background_0.png" id="1_vctw5"]
 [ext_resource type="Theme" uid="uid://dg2qdv72ayqap" path="res://Scenes/ui/themes/bg-test.tres" id="1_xjl46"]
 [ext_resource type="Theme" uid="uid://dvfut26fprh7d" path="res://Scenes/ui/themes/theme_one.tres" id="2_g4arw"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_evg2l"]
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
@@ -47,6 +49,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Buttons" type="PanelContainer" parent="CanvasLayer"]
+material = SubResource("CanvasItemMaterial_evg2l")
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

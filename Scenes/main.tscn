@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://8t3nkhq5682t" path="res://Scenes/ui/ui.tscn" id="4_16v5a"]
 [ext_resource type="PackedScene" uid="uid://oq3ifdx0g0si" path="res://Scenes/level_2.tscn" id="5_woty0"]
 [ext_resource type="PackedScene" uid="uid://cs02sbkdnpr5c" path="res://Scenes/level_3.tscn" id="6_quqe4"]
-[ext_resource type="PackedScene" path="res://Scenes/ui/victory_area.tscn" id="8_lxe71"]
+
+[ext_resource type="PackedScene" uid="uid://cc3ngwu105pr4" path="res://Scenes/ui/victory_area.tscn" id="8_lxe71"]
+
 [ext_resource type="PackedScene" uid="uid://bkr0335rgledp" path="res://Scenes/level_4.tscn" id="9_enqju"]
 
 [node name="Main" type="Node2D"]
@@ -17,20 +19,23 @@ script = ExtResource("1_k6jm1")
 metadata/_edit_group_ = true
 
 [node name="Level1" parent="." instance=ExtResource("2_faqfv")]
-position = Vector2(-657, -227)
+position = Vector2(-657, -1029)
 
 [node name="main_menu" parent="." instance=ExtResource("3_hpv0y")]
+offset_top = -802.0
+offset_bottom = -802.0
 
 [node name="UI" parent="." instance=ExtResource("4_16v5a")]
 
 [node name="level 2" parent="." instance=ExtResource("5_woty0")]
-position = Vector2(10, -8698)
+position = Vector2(10, -9500)
 
 [node name="level_3" parent="." instance=ExtResource("6_quqe4")]
-position = Vector2(-23, -19165)
+
+position = Vector2(-23, -19967)
 
 [node name="VictoryArea" parent="." instance=ExtResource("8_lxe71")]
-position = Vector2(-566, -39521)
+position = Vector2(-566, -40323)
 
 [node name="Level4" parent="." instance=ExtResource("9_enqju")]
-position = Vector2(7, -27088)
+position = Vector2(7, -27890)
