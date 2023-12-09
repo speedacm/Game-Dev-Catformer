@@ -43,7 +43,8 @@ func _physics_process(delta):
 		
 		AnimatePlayer()
 		
-		
+		if(position.x > 1900): velocity.x = -1000
+		if(position.x < -2100): velocity.x = 1000
 
 			
 
